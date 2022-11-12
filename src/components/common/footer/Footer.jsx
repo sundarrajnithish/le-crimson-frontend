@@ -1,5 +1,6 @@
 import React from "react"
-import "./footer.css"
+import "./footer.module.css"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -59,6 +60,14 @@ const Footer = () => {
       <div className='legal  '>
         <div className='container flexSB'>
           <p>©All Rights Reserved</p>
+          <ul>
+            
+                <Link to='/home'>Home </Link>
+              
+                <Link to='/AboutUs'>About Us </Link>
+
+                <Link to='/AboutUs'>Contact Us</Link>
+              </ul>
           <p>
             Developed by CrimsonFive
           </p>

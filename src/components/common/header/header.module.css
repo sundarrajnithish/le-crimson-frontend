@@ -19,7 +19,13 @@ header li:hover {
 header a {
   color: #fff;
 }
+<<<<<<< Updated upstream
 .barIcon {
+=======
+.barIcon{
+  height: 14px;
+  width: 14px;
+>>>>>>> Stashed changes
   font-size: 25px;
   background: none;
   color: #fff;
@@ -59,4 +65,17 @@ header a {
   header ul li {
     margin-bottom: 30px;
   }
+<<<<<<< Updated upstream
+=======
+  button {
+    background-color: rgba(249, 13, 13, 0.71);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.4s;
+  }
+>>>>>>> Stashed changes
 }

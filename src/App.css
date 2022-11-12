@@ -81,7 +81,11 @@ a {
   padding: 10px 0;
   padding-left: 20px;
   padding-top: 20px;
+<<<<<<< Updated upstream
   padding-bottom: 0px;
+=======
+  padding-bottom: 20px;
+>>>>>>> Stashed changes
 }
 ul {
   list-style-type: none;
