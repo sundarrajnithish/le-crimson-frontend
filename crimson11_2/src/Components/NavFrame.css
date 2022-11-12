@@ -1,0 +1,9 @@
+.text {
+  text-align: left;
+  width: 1010px;
+  height: 50px;
+  background-color: brown;
+  font-size: 30px;
+  color: #ffff;
+  padding-top: 10px;
+}

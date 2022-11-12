@@ -1,0 +1,45 @@
+.container-C {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ffff;
+}
+.frame-C {
+  top: 10px !important;
+  width: 800px !important;
+  background-color: #ffff;
+  padding: 100px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: rows;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  font-size: 24px;
+  border-radius: 5px;
+  top: 100px;
+}
+.frame-C > div {
+  width: 180px;
+  height: 80px;
+  margin: 10px;
+  padding-left: 5px;
+  text-align: left;
+  border: 1px solid rgb(82, 79, 79);
+  border-radius: 10px;
+  background-color: rgb(157 4 4);
+  color: #ffff;
+}
+.frame-C > div:hover {
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  box-shadow: 20px 20px 50px 10px rgb(243, 6, 6) inset;
+}

@@ -1,0 +1,9 @@
+.card-container {
+  background-color: rgba(247, 41, 65, 0.174);
+  width: 300px;
+  text-align: center;
+}
+.img-container {
+  width: 250px;
+  justify-self: center;
+}

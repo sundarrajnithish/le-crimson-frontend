@@ -1,0 +1,25 @@
+.Container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+.frame {
+  top: 10px !important;
+  width: 800px !important;
+  background-color: #ffff;
+  padding: 50px 50px 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: rows;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  font-size: 24px;
+  border-radius: 5px;
+  top: 100px;
+}

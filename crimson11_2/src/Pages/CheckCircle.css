@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Blinker", sans-serif;
+}
+
+.wrapper {
+  margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ffff;
+  letter-spacing: 2px;
+  background-color: #f3213d63;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.wrapper .sub_wrapper {
+  margin-top: 100px;
+  display: flex;
+}
+
+.wrapper .sub_wrapper .topics {
+  margin: 15px;
+  text-align: center;
+}
+
+.wrapper .sub_wrapper .topics p {
+  color: #121212;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.container-I {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  background: #ffffff5e;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.container-I .input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.container-I .d_checkbox {
+  width: 65px;
+  height: 65px;
+  background: #eb0606fa;
+  border-radius: 50%;
+  display: none;
+}
+
+.container-I .d_checkbox,
+.container-I .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-I .fas {
+  font-size: 22px;
+  color: #f32121;
+}
+
+.container-I .input:checked ~ .d_checkbox {
+  display: block;
+}
+
+.container-I .input:checked ~ .fas {
+  color: #ffff;
+}
+.Fav-button {
+  margin-top: 50px;
+  margin-left: 900px;
+  background-color: #f3213d;
+  color: #ffff;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+}
+
+.Fav-button:hover {
+  background: transparent;
+  cursor: pointer;
+  border: 2px solid #f32121;
+  color: rgb(240, 6, 6);
+}
