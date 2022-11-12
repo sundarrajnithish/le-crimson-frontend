@@ -1,28 +1,31 @@
-import React from "react"
-import Header from "./components/common/header/Header"
-import "./App.css"
-import Homepages from "./components/home/Homepages"
-import Footer from "./components/common/footer/Footer"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import SinglePage from "./components/singlePage/SinglePage"
-import Culture from "./components/culture/Culture"
-import CricketNews from "./components/home/discover/CricketNews"
+// import logo from './logo.svg';
+// import './App.css';
+import "./App.css";
+import Landingpage from "./Landingpage";
+import Loginpage from "./Loginpage";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-const App = () => {
+// import Header from "./components/common/header/Header"
+
+
+
+import Homepages from "./components/home/Homepages"
+
+function App() {
   return (
-    <>
-      <Router>
-        <Header />
-        {/* <CricketNews /> */}
-        <Switch>
-          <Route exact path='/' component={Homepages} />
-          {/* <Route path='/singlepage/:id' exact component={SinglePage} /> */}
-          <Route exact path='/culture' component={Culture} />
-        </Switch>
-        <Footer />
-      </Router>
-    </>
-  )
+    <div class="container">
+      {/* <Header /> */}
+      <Routes>
+        <Route path="/" element={<Landingpage />} />
+        <Route path="/login" element={<Loginpage />} />
+        <Route path="/home" element={<Homepages />} />
+        {/* <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/preference" element={<PreferencePage />} /> */}
+      </Routes>
+      </div>
+    
+  );
 }
 
-export default App
+export default App;
