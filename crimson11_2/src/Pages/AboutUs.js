@@ -1,5 +1,13 @@
 import "./AboutUs.css";
+import { useNavigate } from "react-router-dom";
+
 const AboutUs = () => {
+  let navigate = useNavigate();
+  const route = () => {
+    let path = `/Login`;
+    navigate(path);
+  };
+
   return (
     <section className="about">
       <div className="main">
@@ -23,6 +31,9 @@ const AboutUs = () => {
             intersection of regulation and commerce
           </p>
           <button type="button">Let's connect</button>
+          <button type="button" onClick={route}>
+            Login
+          </button>
         </div>
       </div>
     </section>
