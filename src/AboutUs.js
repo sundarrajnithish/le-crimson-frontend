@@ -1,8 +1,10 @@
+import Header from "../src/components/common/header/Header"
 import Footer from "./footer"
 import "./AboutUs.css";
 const AboutUs = () => {
   return (
     <>
+    <Header />
     <section className="about">
       <div className="main">
         <img className="Aimg" src={require("./logor.png")} alt="Company Logo" />

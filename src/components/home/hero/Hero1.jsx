@@ -10,7 +10,7 @@ const Hero = () => {
   
   useEffect(() => {
     const getItems = async () => {
-        const response = await axios.get('https://newsapi.org/v2/everything?q=canada&apiKey=0de6fae3bb8e4eecaf844a1ab735a457')
+        const response = await axios.get('https://newsapi.org/v2/everything?q=Cricket&apiKey=0de6fae3bb8e4eecaf844a1ab735a457')
         console.log(response.data, "At Hero")
         setItems(response.data.articles)
     }
@@ -22,7 +22,7 @@ const Hero = () => {
     <>
       <section className='hero'>
         <div className='container'>
-          {items.slice(4, 8).map((item) => {
+          {items.slice(9, 13).map((item) => {
             return (
               <>
                 <Card key={item.id} item={item} />

@@ -19,6 +19,10 @@ const Header = () => {
               {navbar ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}
               <button className='barIcon' onClick={() => setNavbar(!navbar)} />
               </li> */}
+              
+              <li>
+
+              </li>
               <li>
                 <Link to='/'>Home</Link>
               </li>
@@ -37,7 +41,11 @@ const Header = () => {
               <li>
                 <Link to='/memes'>Contact Us</Link>
               </li>
-              
+              <ul>
+              <div className="searchbar">
+                <input type='text' placeholder="Search..." style = {{width:"800px", height:"25px"}} />
+              </div>
+              </ul>
             </ul>
              
             

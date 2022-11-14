@@ -17,12 +17,8 @@ body {
   height: 100vh;
   width: 100%;
   background-image: linear-gradient(
-<<<<<<< Updated upstream
-=======
     rgb(250, 250, 248),
->>>>>>> Stashed changes
-    rgba(249, 13, 13, 0.71),
-    rgb(250, 250, 248)
+    rgba(249, 13, 13, 0.71)
   );
 }
 /* Frame*/
