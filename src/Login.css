@@ -14,7 +14,7 @@
 }
 /*Background image*/
 body {
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-image: linear-gradient(
     rgb(250, 250, 248),
@@ -24,16 +24,16 @@ body {
 /* Frame*/
 .login_box {
   background-color: rgba(255, 255, 255, 0.913);
-  padding: 10px 50px 50px 50px;
+  padding: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 300px;
+  width: 500px;
   font-size: 14px;
   border-radius: 5px;
-  top: 100px;
+  top: 200px;
 }
 
 /*Le Crimson logo*/
@@ -48,16 +48,17 @@ body {
 
 .i {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 20px;
   padding: 10px 10px 20px 10px;
-  width: 100%;
+  width: 420px;
 }
 
 .login-btn {
   /*Button shape*/
   position: relative;
   padding: 10px 100px 10px 100px;
+  width: 304px;
+  height: 44px;
 
   border-radius: 1px;
   background-color: rgba(245, 10, 10, 0.696);
