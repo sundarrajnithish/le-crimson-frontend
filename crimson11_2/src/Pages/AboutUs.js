@@ -23,14 +23,15 @@ const AboutUs = () => {
             Today, we're seeing the gradual evolution of Enterprise strategy,
             business models and frontier technology adopting new operating
             models that serve the Knowledge Economy led by Artificial
-            Intelligence and Data Sciences. The leadership at HUBINO recognizes
-            this need for the Enterprise market place and has built a global
-            technology eco-system practice led HUB where there is a natural
-            immersion and integration of the intelligence, technology, and human
-            expertise which will help leaders be poised to thrive at the
-            intersection of regulation and commerce
+            Intelligence and Data Sciences. The leadership at le Crimson
+            recognizes this need for the Enterprise market place and has built a
+            global technology eco-system practice led HUB where there is a
+            natural immersion and integration of the intelligence, technology,
+            and human expertise which will help leaders be poised to thrive at
+            the intersection of regulation and commerce
           </p>
           <button type="button">Let's connect</button>
+          //login route
           <button type="button" onClick={route}>
             Login
           </button>
