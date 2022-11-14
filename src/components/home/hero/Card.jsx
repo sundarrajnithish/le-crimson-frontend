@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
+
+
 const Card = ({ item: { id, urlToImage, catgeory, title, author, url, description, source } }) => {
   // console.log(urlToImage,"Cover");
   return (
@@ -11,14 +13,14 @@ const Card = ({ item: { id, urlToImage, catgeory, title, author, url, descriptio
         </div>
         <div className='text'>
           {/* <span className='category'>{catgeory}</span> */}
-          <h1 className='titleBg'>{title}</h1>
-          <Link to={url}>
+          <h1 className='titleBg'><a href = {url}> {title}</a></h1>
+          {/* <Link to={url}> */}
             {/* <>{description}</> */}
-          </Link>
-          <div className='author flex'>
-            <span>by {source.name}</span>
+          {/* </Link> */}
+          {/* <div className='author flex'>
+            <span>by {source.name}</span> */}
             {/* <span>{time}</span> */}
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </>

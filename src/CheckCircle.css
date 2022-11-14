@@ -19,7 +19,7 @@
   margin-bottom: 12px;
   color: #ffff;
   letter-spacing: 2px;
-  background-color: #f3213d63;
+  background-color: #000000;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -28,6 +28,7 @@
   margin-top: 100px;
   margin-left: 100px;
   display: flex;
+  width: 1010px;
 }
 
 .wrapper .sub_wrapper .topics {
@@ -45,8 +46,8 @@
   display: block;
   position: relative;
   cursor: pointer;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   background: #ffffff5e;
   border-radius: 50%;
   margin-bottom: 10px;

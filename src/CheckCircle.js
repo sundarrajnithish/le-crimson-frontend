@@ -1,5 +1,6 @@
 import "./CheckCircle.css";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function CheckCircle() {
   const [checkedValues, setValue] = useState([]);
@@ -14,6 +15,12 @@ function CheckCircle() {
       });
   }
   console.log(checkedValues);
+
+  let navigate = useNavigate();
+  const route = () => {
+    let path = `/home`;
+    navigate(path);
+  };
 
   return (
     <div class="wrapper">
@@ -117,7 +124,9 @@ function CheckCircle() {
           <p>Entertainment</p>
         </div>
       </div>
-      <button className="Fav-button">Save</button>
+      <button className="Fav-button" onClick={route}>
+        Save
+      </button>
     </div>
   );
 }

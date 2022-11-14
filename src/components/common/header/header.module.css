@@ -1,8 +1,14 @@
+.searchbar {
+width: 304px;
+height: 30px;
+
+}
+
 .head {
   cursor: pointer;
 }
 .head .logo img {
-  width: 500px;
+  width: 400px;
 }
 header {
   background-color: #000;
@@ -19,13 +25,9 @@ header li:hover {
 header a {
   color: #fff;
 }
-<<<<<<< Updated upstream
-.barIcon {
-=======
 .barIcon{
   height: 14px;
   width: 14px;
->>>>>>> Stashed changes
   font-size: 25px;
   background: none;
   color: #fff;
@@ -65,8 +67,6 @@ header a {
   header ul li {
     margin-bottom: 30px;
   }
-<<<<<<< Updated upstream
-=======
   button {
     background-color: rgba(249, 13, 13, 0.71);
     color: white;
@@ -77,5 +77,4 @@ header a {
     border-radius: 30px;
     transition: 0.4s;
   }
->>>>>>> Stashed changes
 }
