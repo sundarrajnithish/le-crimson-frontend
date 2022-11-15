@@ -1,6 +1,6 @@
 /*Landing page with logo and login button*/
 import { useNavigate } from "react-router-dom";
-import Footer from "./footer";
+// import Footer from "./footer";
 import "./Login.css";
 
 
@@ -21,7 +21,7 @@ function Landingpage() {
           <b>Login</b>
         </button>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
