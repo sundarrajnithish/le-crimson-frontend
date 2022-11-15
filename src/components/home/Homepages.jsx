@@ -31,10 +31,11 @@ const Homepages = () => {
               
                 <Heading title='Picture News' />
       <Hero />
-      <AnotherPage />
+      
       {/* <Discover /> */}
       <Heading title='Generic News' />
       <Hero1 />
+      <AnotherPage />
       
       {/* <AnotherPage /> */}
       <br />

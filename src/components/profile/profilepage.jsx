@@ -24,7 +24,7 @@ const profilepage = () => {
         <br />
         <br />
         <br />
-        <Preferences />
+        {/* <Preferences /> */}
     </div>
   )
 }

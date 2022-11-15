@@ -22,7 +22,9 @@ import Temp from "./temp"
 
 import Profile from "./components/profile/profilepage"
 
+import Search from "./components/search/searchpage"
 
+import Business from "./businesspage"
 
 function App() {
   return (
@@ -37,6 +39,16 @@ function App() {
         <Route path="/preferences" element={<Preferences />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/lol" element={<Temp />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/business" element={<Business />} />
+        <Route path="/world" element={<Business />} />
+        <Route path="/sports" element={<Business />} />
+        <Route path="/politics" element={<Business />} />
+        <Route path="/health" element={<Business />} />
+        <Route path="/local" element={<Business />} />
+        <Route path="/science" element={<Business />} />
+        <Route path="/technology" element={<Business />} />
+        <Route path="/entertainment" element={<Business />} />
         {/* <Route path="/preference" element={<PreferencePage />} /> */}
       </Routes>
       {/* <Footer /> */}

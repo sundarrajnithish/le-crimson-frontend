@@ -68,6 +68,9 @@ const Header = () => {
                 <Link to="/preferences">Preferences</Link>
               </li>
               <li>
+                <Link to="/search">Search</Link>
+              </li>
+              <li>
                 <Link to={vari1}>{items[0]}</Link>
               </li>
               <li>
@@ -94,6 +97,7 @@ const Header = () => {
               <li>
                 <Link to={vari9}>{items[8]}</Link>
               </li>
+              
               {/* <li>
                 <Link to="/AboutUs">About Us</Link>
               </li>
