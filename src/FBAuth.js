@@ -18,7 +18,7 @@ const LoginFB = () => {
     <div>
       <FacebookLogin
         appId={appId}
-        autoLoad={true}
+        autoLoad={false}
         textButton="Sign in with Facebook"
         cssClass="facebook-button"
         icon="fa-facebook-official"

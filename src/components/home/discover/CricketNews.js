@@ -25,13 +25,13 @@ const NewsList = () => {
         const dataFetch = async () => {
           const data = await (
             await fetch(
-              "./search-api-response"
+              "https://lecrimson-backend.herokuapp.com/news/home"
             )
           ).json();
          console.log(data)
           // set state when the data received
-          setArticles_obj(data.articles);
-          console.log(Articles_obj);
+          setArticles_obj(data);
+          console.log(Articles_obj), "hello here articles kiran";
         };
     
         dataFetch();

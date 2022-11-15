@@ -57,7 +57,8 @@ const Footer = () => {
           {/* </div> */}
         {/* </div> */}
       {/* </footer> */}
-      <div className='legal  '>
+      <footer>
+     
         <div className='container flexSB'>
           <p>©All Rights Reserved</p>
           <ul>
@@ -72,7 +73,8 @@ const Footer = () => {
             Developed by CrimsonFive
           </p>
         </div>
-      </div>
+      
+      </footer>
     </>
   )
 }

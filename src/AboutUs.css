@@ -3,7 +3,7 @@
 }
 .Aimg {
   height: auto;
-  width: 420px;
+  width: 600px;
 }
 
 .about-text {
@@ -11,10 +11,11 @@
 }
 
 .main {
-  width: 1130px;
+  width: 2000px;
+  padding-top: 100px;
   max-width: 95%;
   margin: 0 auto;
-  margin-top: 350px;
+
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -53,6 +54,7 @@
   padding: 13px 30px;
   border-radius: 30px;
   transition: 0.4s;
+  margin-left: 30px;
 }
 
 .buttonabout:hover {

@@ -1,0 +1,49 @@
+.profile__container{
+    height: 50vh;
+    padding-top: 7rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.profile__item{
+    padding: 10px;
+    text-align: left;
+}
+.location__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 300px;
+}
+/*=================MAN========*/
+.me {
+    width: 20rem;
+    height: 15rem;
+    position: absolute;
+    left: calc(50%- 7.5rem);
+}
+
+.btn{
+    width: max-content;
+    display: -ms-inline-grid;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary); 
+    transition: var(--transition);
+}
+
+.btn:hover{
+    background-color: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.button-spacing{
+    margin-left: 10px;
+}
+
+.image{
+    padding-left: 100px;
+    width: 300px;
+}

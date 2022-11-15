@@ -8,21 +8,22 @@ import { Routes, Route } from "react-router-dom";
 
 // import Header from "./components/common/header/Header"
 
-<<<<<<< Updated upstream
-
-
-import Homepages from "./components/home/Homepages"
-
-=======
 // import Footer from "./footer"
 
 import Homepages from "./components/home/Homepages"
 
-import AboutUs from "./AboutUs"
+import AboutUs from "./AboutUsPage"
 
 import Preferences from "./PreferencePage"
 
->>>>>>> Stashed changes
+import Contact from "./components/contact/contactpage"
+
+import Temp from "./temp"
+
+import Profile from "./components/profile/profilepage"
+
+
+
 function App() {
   return (
     <div class="container">
@@ -31,17 +32,14 @@ function App() {
         <Route path="/" element={<Landingpage />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/home" element={<Homepages />} />
-<<<<<<< Updated upstream
-        {/* <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/preference" element={<PreferencePage />} /> */}
-      </Routes>
-=======
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/contactus" element={<Contact />} />
         <Route path="/preferences" element={<Preferences />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/lol" element={<Temp />} />
         {/* <Route path="/preference" element={<PreferencePage />} /> */}
       </Routes>
       {/* <Footer /> */}
->>>>>>> Stashed changes
       </div>
     
   );

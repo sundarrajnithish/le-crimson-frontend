@@ -3,7 +3,7 @@
   color: #fff;
 }
 .hero a {
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 .hero .box {
   position: relative;
@@ -104,4 +104,10 @@
     grid-row-start: 15;
     grid-row-end: 20;
   }
+}
+
+
+.title-card {
+  color:green
+
 }
