@@ -9,21 +9,11 @@ function PreferencePage() {
     <>
     <div className="container-h">
       <Header />
-      </div>
+      
       <Logobar />
 
       <CheckCircle />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      </div>
       <br />
       <br />
       <br />
