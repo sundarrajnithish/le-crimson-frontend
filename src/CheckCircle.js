@@ -1,12 +1,15 @@
 import "./CheckCircle.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 
 // const axios = require('axios')
 
 export async function createUser(data) {
-  const response = await axios.post(`https://lecrimson-backend.herokuapp.com/profile`, {user: data});
+  const response = await axios.post(
+    `https://lecrimson-backend.herokuapp.com/profile`,
+    { user: data }
+  );
   return response.data;
 }
 
@@ -23,7 +26,6 @@ function CheckCircle() {
       });
   }
 
-
   console.log(checkedValues);
 
   let navigate = useNavigate();
@@ -31,8 +33,6 @@ function CheckCircle() {
     let path = `/home`;
     navigate(path);
   };
-
- 
 
   return (
     <div class="wrapper">
@@ -50,7 +50,7 @@ function CheckCircle() {
       <br />
       <br />
       <br />
-      <p class="heading">Choose your Interest</p>
+      <p class="heading-C">Choose your Interest</p>
       <div class="sub_wrapper">
         <div class="topics">
           <label class="container-I">
@@ -113,13 +113,13 @@ function CheckCircle() {
             <input
               type="checkbox"
               class="input"
-              value="Travel"
+              value="Health"
               onChange={handleChange}
             />
             <span class="d_checkbox"></span>
-            <i class="fas fa-umbrella-beach"></i>
+            <i class="fas fa-heart-pulse"></i>
           </label>
-          <p>Travel</p>
+          <p>Health</p>
         </div>
 
         <div class="topics">
@@ -127,13 +127,41 @@ function CheckCircle() {
             <input
               type="checkbox"
               class="input"
-              value="Weather"
+              value="Local"
               onChange={handleChange}
             />
             <span class="d_checkbox"></span>
-            <i class="fas fa-cloud"></i>
+            <i class="fas fa-map"></i>
           </label>
-          <p>Weather</p>
+          <p>Local</p>
+        </div>
+
+        <div class="topics">
+          <label class="container-I">
+            <input
+              type="checkbox"
+              class="input"
+              value="science"
+              onChange={handleChange}
+            />
+            <span class="d_checkbox"></span>
+            <i class="fas fa-flask"></i>
+          </label>
+          <p>Science</p>
+        </div>
+
+        <div class="topics">
+          <label class="container-I">
+            <input
+              type="checkbox"
+              class="input"
+              value="Technology"
+              onChange={handleChange}
+            />
+            <span class="d_checkbox"></span>
+            <i class="fas fa-microchip"></i>
+          </label>
+          <p>Technology</p>
         </div>
 
         <div class="topics">

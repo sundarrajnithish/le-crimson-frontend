@@ -13,7 +13,7 @@ const Card = ({ item: { id, urlToImage, catgeory, title, author, url, descriptio
         </div>
         <div className='titleBg'>
           {/* <span className='category'>{catgeory}</span> */}
-          <h1 className='titleBg'><a href = {url}> {title}</a></h1>
+          <h1 className='titleBg' ><a href = {url}> {title}</a></h1>
           {/* <Link to={url}> */}
             {/* <>{description}</> */}
           {/* </Link> */}

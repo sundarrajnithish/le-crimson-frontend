@@ -8,6 +8,10 @@ import {Link} from "react-router-dom"
 function DropDownProfile() {
   const [open, setOpen] = useState(false);
 
+  const items = JSON.parse(localStorage.getItem('login'));
+  console.log(items["profileObj"]["name"])
+  console.log(items["profileObj"]["imageUrl"])
+
   let menuRef = useRef();
 
   useEffect(() => {
@@ -33,7 +37,7 @@ function DropDownProfile() {
             setOpen(!open);
           }}
         >
-          <img className=".img" src={portrait}></img>
+          <img src={items["profileObj"]["imageUrl"]}></img>
         </div>
 
         <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
