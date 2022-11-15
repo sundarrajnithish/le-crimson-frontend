@@ -1,6 +1,14 @@
 import "./CheckCircle.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios'
+
+// const axios = require('axios')
+
+export async function createUser(data) {
+  const response = await axios.post(`https://lecrimson-backend.herokuapp.com/profile`, {user: data});
+  return response.data;
+}
 
 function CheckCircle() {
   const [checkedValues, setValue] = useState([]);
@@ -14,6 +22,8 @@ function CheckCircle() {
         return [...pre.filter((fav) => fav !== value)];
       });
   }
+
+
   console.log(checkedValues);
 
   let navigate = useNavigate();
@@ -22,8 +32,19 @@ function CheckCircle() {
     navigate(path);
   };
 
+ 
+
   return (
     <div class="wrapper">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <p class="heading">Choose your Interest</p>
       <div class="sub_wrapper">
         <div class="topics">
@@ -125,6 +146,7 @@ function CheckCircle() {
         </div>
       </div>
       <button className="Fav-button" onClick={route}>
+        {/* {createUser(checkedValues)}; */}
         Save
       </button>
     </div>

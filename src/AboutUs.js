@@ -1,6 +1,8 @@
 import "./AboutUs.css";
 import { useNavigate } from "react-router-dom";
 
+import Heading from "./components/common/heading/Heading"
+
 const AboutUs = () => {
   let navigate = useNavigate();
   const route = () => {

@@ -79,30 +79,7 @@ body {
 }
 
 /*Footer elements*/
-.footer {
-  position: fixed;
-  bottom: 0%;
-  justify-content: center;
-  flex-direction: row;
-  align-items: stretch;
-  display: flex;
-}
 
-.footer a {
-  margin: 10px;
-  padding: 10px;
-  color: #151414;
-  font-family: Roboto, arial, sans-serif;
-}
-
-.footer a:hover {
-  background-color: hsla(0, 63%, 72%, 0.651);
-}
-
-.footer p {
-  position: relative;
-  left: 200%;
-}
 
 /*remove underline*/
 a {

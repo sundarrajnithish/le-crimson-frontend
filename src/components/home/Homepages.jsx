@@ -9,7 +9,7 @@ import Homes from "./mainContent/homes/Home"
 import Music from "./mainContent/musics/Music"
 
 import Header from "../common/header/Header"
-import Footer from "../common/footer/footer"
+import Footer from "./footer"
 import Discover from "./discover/Discover"
 
 import Heading from "../common/heading/Heading"
@@ -36,6 +36,7 @@ const Homepages = () => {
       <Hero1 />
       
       <Music />
+      <br />
       <Footer />
       </div>
       {/* <Homes /> */}

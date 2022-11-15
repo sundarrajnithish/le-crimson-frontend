@@ -4,7 +4,7 @@ import "./header.module.css";
 import DropDownProfile from "./DropDownProfile";
 import { Link } from "react-router-dom";
 
-import Footer from "../footer/Footer";
+
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -26,23 +26,21 @@ const Header = () => {
 
               <li></li>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
-              <li>
-                <Link to="/news">News</Link>
-              </li>
-              <li>
+      
+              {/* <li>
                 <Link to="/social">Social</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/preferences">Preferences</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/AboutUs">About Us</Link>
               </li>
               <li>
-                <Link to="/memes">Contact Us</Link>
-              </li>
+                <Link to="/contactus">Contact Us</Link>
+              </li> */}
               <ul>
                 
               </ul>

@@ -11,7 +11,7 @@ const Card = ({ item: { id, urlToImage, catgeory, title, author, url, descriptio
         <div className='img'>
           <img src={urlToImage} alt='' />
         </div>
-        <div className='text'>
+        <div className='titleBg'>
           {/* <span className='category'>{catgeory}</span> */}
           <h1 className='titleBg'><a href = {url}> {title}</a></h1>
           {/* <Link to={url}> */}
