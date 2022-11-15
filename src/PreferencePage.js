@@ -7,7 +7,9 @@ import Footer from "./components/home/footer"
 function PreferencePage() {
   return (
     <>
+    <div className="container-h">
       <Header />
+      </div>
       <Logobar />
 
       <CheckCircle />

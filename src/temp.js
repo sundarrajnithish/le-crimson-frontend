@@ -57,7 +57,7 @@ const Hero = () => {
   useEffect(() => {
     const getItems = async () => {
         const response = await axios.get('https://lecrimson-backend.herokuapp.com/news/home')
-        console.log(response.data, "At Hero")
+        console.log(response, "At Hero in temp js")
         setItems(response.data.articles)
     }
         getItems()

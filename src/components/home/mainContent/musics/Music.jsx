@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import "./music.css"
 import Slider from "react-slick"
 import Heading from "../../../common/heading/Heading"
@@ -6,7 +6,22 @@ import { popular } from "../../../../dummyData"
 
 import local_data from "./search-api-response.json"
 
+import axios from 'axios'
+
+import arrayShuffle from "array-shuffle"
+
 const Music = () => {
+  const [items, setItems] = useState([])
+  
+  useEffect(() => {
+    const getItems = async () => {
+        const response = await axios.get('https://lecrimson-backend.herokuapp.com/news/home')
+        console.log(response.data, "At Music")
+        setItems(arrayShuffle(response.data))
+    }
+        getItems()
+}, [])
+
   const settings = {
     className: "center",
     centerMode: true,

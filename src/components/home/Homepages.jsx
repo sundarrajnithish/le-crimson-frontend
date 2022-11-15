@@ -6,7 +6,7 @@ import Hero from "./hero/Hero"
 import Hero1 from "./hero/Hero1"
 import Homes from "./mainContent/homes/Home"
 
-import Music from "./mainContent/musics/Music"
+import AnotherPage from "./mainContent/life/Life"
 
 import Header from "../common/header/Header"
 import Footer from "./footer"
@@ -29,13 +29,14 @@ const Homepages = () => {
                   />
                 </div> */}
               
-                <Heading title='#1 Trending' />
+                <Heading title='Picture News' />
       <Hero />
-      <Discover />
-      <Heading title='Cricket News' />
+      <AnotherPage />
+      {/* <Discover /> */}
+      <Heading title='Generic News' />
       <Hero1 />
       
-      <Music />
+      {/* <AnotherPage /> */}
       <br />
       <Footer />
       </div>

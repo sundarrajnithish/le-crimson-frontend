@@ -144,7 +144,7 @@ function CheckCircle() {
             <input
               type="checkbox"
               class="input"
-              value="science"
+              value="Science"
               onChange={handleChange}
             />
             <span class="d_checkbox"></span>

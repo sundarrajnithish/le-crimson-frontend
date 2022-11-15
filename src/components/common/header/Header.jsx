@@ -64,9 +64,9 @@ const Header = () => {
               {/* <li>
                 <Link to="/social">Social</Link>
               </li> */}
-               <li>
+               {/* <li>
                 <Link to="/preferences">Preferences</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to={vari1}>{items[0]}</Link>
               </li>

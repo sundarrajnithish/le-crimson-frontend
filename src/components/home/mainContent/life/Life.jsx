@@ -1,11 +1,26 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Slider from "react-slick"
 import { lifestyle } from "../../../../dummyData"
 import Heading from "../../../common/heading/Heading"
 
+
+import axios from 'axios'
+
+import arrayShuffle from "array-shuffle"
+
 import "../Ppost/ppost.css"
 //copy ppost code
 const Life = () => {
+  const [items, setItems] = useState([])
+  useEffect(() => {
+    const getItems = async () => {
+        const response = await axios.get('https://lecrimson-backend.herokuapp.com/news/home')
+        console.log(response.data, "At Life")
+        setItems(arrayShuffle(response.data))
+    }
+        getItems()
+}, [])
+
   const settings = {
     dots: false,
     infinite: true,
@@ -25,7 +40,7 @@ const Life = () => {
   return (
     <>
       <section className='popularPost life'>
-        <Heading title='Life Style' />
+        <Heading title='Grid News' />
         <div className='content'>
           <Slider {...settings}>
             {lifestyle.map((val) => {

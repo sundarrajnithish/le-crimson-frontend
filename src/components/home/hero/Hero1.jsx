@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 // import { hero } from "../../../dummyData"
 import "./hero.css"
-import Card from "./Card"
+import Card from "./Card2"
 
 import axios from 'axios'
 
@@ -12,9 +12,9 @@ const Hero = () => {
   
   useEffect(() => {
     const getItems = async () => {
-        const response = await axios.get('https://newsapi.org/v2/everything?q=Cricket&apiKey=0de6fae3bb8e4eecaf844a1ab735a457')
-        console.log(response.data, "At Hero")
-        setItems(arrayShuffle(response.data.articles))
+        const response = await axios.get('https://lecrimson-backend.herokuapp.com/news/home')
+        console.log(response.data, "At Hero1")
+        setItems(arrayShuffle(response.data))
     }
         getItems()
 }, [])

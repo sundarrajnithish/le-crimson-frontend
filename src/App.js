@@ -20,6 +20,8 @@ import Contact from "./components/contact/contactpage"
 
 import Temp from "./temp"
 
+import Profile from "./components/profile/profilepage"
+
 
 
 function App() {
@@ -33,6 +35,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<Contact />} />
         <Route path="/preferences" element={<Preferences />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/lol" element={<Temp />} />
         {/* <Route path="/preference" element={<PreferencePage />} /> */}
       </Routes>
