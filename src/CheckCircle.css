@@ -13,15 +13,16 @@
   transform: translate(-50%, -50%);
 }
 
-.heading {
+.heading-C {
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   margin-bottom: 12px;
   color: #ffff;
   letter-spacing: 2px;
-  background-color: #000000;
+  background-color: #000000c4;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-top: 300px;
 }
 
 .wrapper .sub_wrapper {
@@ -29,6 +30,8 @@
   margin-left: 100px;
   display: flex;
   width: 1010px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .wrapper .sub_wrapper .topics {
@@ -48,7 +51,7 @@
   cursor: pointer;
   width: 100px;
   height: 100px;
-  background: #ffffff5e;
+  background: #e785855e;
   border-radius: 50%;
   margin-bottom: 10px;
 }

@@ -1,8 +1,8 @@
 import Logobar from "./Logobar";
 import CheckCircle from "./CheckCircle";
-import Header from "../src/components/common/header/Header"
-
-import Footer from "./components/home/footer"
+import Header from "../src/components/common/header/Header";
+import "./Preference.css";
+import Footer from "./components/home/footer";
 // import "./Preferences.css";
 function PreferencePage() {
   return (
@@ -43,7 +43,9 @@ function PreferencePage() {
       <br />
       <br />
       <br />
-      <Footer />
+      <div className="footer-container-preference">
+        <Footer />
+      </div>
     </>
   );
 }

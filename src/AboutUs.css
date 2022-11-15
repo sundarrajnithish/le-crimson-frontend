@@ -63,3 +63,8 @@
   border: 2px solid #f9004d;
   color: #f9004d;
 }
+
+.footer-container-AboutUs {
+  position: relative;
+  top: 300px;
+}
