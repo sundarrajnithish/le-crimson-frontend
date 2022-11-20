@@ -24,10 +24,10 @@ function Loginpage() {
     console.log(res, "GAuth Received Data");
     console.log(localStorage.getItem("login")," *GAuth in Local Storage");
   };
-  //  const [res, setValue] = useState([]);
-  //   useEffect(() => {
-  //     localStorage.setItem('login', JSON.stringify(res));
-  //   }, [res]);
+   const [res, setValue] = useState([]);
+    useEffect(() => {
+      localStorage.setItem('login', JSON.stringify(res));
+    }, [res]);
   
   // let navigate = useNavigate();
   // const route = () => {

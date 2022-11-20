@@ -13,7 +13,7 @@ const SearchBar = () => {
     const onSubmit = e => {
         // history.push(`?s=${searchQuery}`);
         console.log("submit ran")
-        e.preventDefault();
+        // e.preventDefault();
 
         console.log(searchQuery, "Printing Search Query")
         localStorage.setItem('search-key', JSON.stringify(searchQuery));

@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react"
 import News from "./news"
 import arrayShuffle from "array-shuffle"
 import axios from 'axios'
+import Newslist from '../news-display/news-list'
 
 
 import "./search.css"
@@ -30,6 +31,8 @@ const Searchpage = () => {
     <Header />
     <br />
     <Search />
+    <br />
+    <Newslist />
     {/* <News /> */}
     </div>
     </>

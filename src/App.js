@@ -12,6 +12,8 @@ import AboutUsPage from './components/about/AboutUsPage';
 import Profile from './components/profile/profilepage'
 import Search from './components/search/searchpage'
 
+import Cometchat from "./components/social/cometchat"
+
 // import Bootstrap from "./components/news-bootstrap/bootstrap"
 
 
@@ -26,6 +28,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/social" element={<Cometchat />} />
         {/* <Route path="/boot" element={<Bootstrap />} /> */}
         </Routes>
   
