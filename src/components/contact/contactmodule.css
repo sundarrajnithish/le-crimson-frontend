@@ -28,7 +28,7 @@
     margin-bottom: 0.5rem;
 }
 
-/*==============FORM=======*/
+/*========FORM=======*/
 form{
     display: flex;
     flex-direction: column;
@@ -44,8 +44,6 @@ textarea{
     resize: none;
 
 }
-
-
 
 .btn{
     width: max-content;

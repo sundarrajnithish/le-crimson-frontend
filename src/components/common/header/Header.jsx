@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Head from "./Head";
-import "./header.module.css";
+import "./header.css";
 import DropDownProfile from "./DropDownProfile";
 import { Link } from "react-router-dom";
 
@@ -39,11 +39,12 @@ const Header = () => {
   var vari8 = "/" + items[7]
   var vari9 = "/" + items[8]
 
-  console.log(items, "data retrieved!!")
+  console.log(items, "Preference Data Received in Header.jsx")
 
   return (
     <>
       <Head />
+      <br />
       <header>
         <div className="container paddingSmall">
           <nav>
@@ -66,6 +67,9 @@ const Header = () => {
               </li> */}
                <li>
                 <Link to="/preferences">Preferences</Link>
+              </li>
+              <li>
+                <Link to="/search">Search</Link>
               </li>
               <li>
                 <Link to={vari1}>{items[0]}</Link>
@@ -94,6 +98,7 @@ const Header = () => {
               <li>
                 <Link to={vari9}>{items[8]}</Link>
               </li>
+              
               {/* <li>
                 <Link to="/AboutUs">About Us</Link>
               </li>

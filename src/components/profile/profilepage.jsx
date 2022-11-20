@@ -4,8 +4,9 @@ import Profile from "./profile"
 import Header from "../common/header/Header"
 
 import Manage from "./manage"
+import Footer from '../common/footer/footer'
 
-import Preferences from "./CheckCircle"
+
 
 const profilepage = () => {
   return (
@@ -13,18 +14,7 @@ const profilepage = () => {
         <Header />
         <Profile />
         <Manage />
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <br />
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <Preferences />
+        <Footer />
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import Man from "../../assets/man.png";
 
 import "./profile.css";
 function profile() {
@@ -26,7 +25,7 @@ function profile() {
           <h1>{respose_after_login.name}</h1>
           <h4>Email: {respose_after_login.email}</h4>
           <div className="location__container">
-            <h5>Location:{respose_after_login.location}</h5>
+            <h4>Location: {respose_after_login.location}</h4>
           </div>
         </div>
       </div>

@@ -1,47 +1,35 @@
-// import logo from './logo.svg';
-// import './App.css';
-import "./App.css";
-import Landingpage from "./Landingpage";
-import Loginpage from "./Loginpage";
-import React from "react";
+// CSS Files
+import './App.css';
+
+// Imports
+import React from 'react'
+import Loginpage from './components/login-page/Loginpage';
 import { Routes, Route } from "react-router-dom";
+import Homepages from './components/home-page/Homepages';
+import PreferencePage from './components/preferences/PreferencePage';
+import Contact from './components/contact/contactpage';
+import AboutUsPage from './components/about/AboutUsPage';
+import Profile from './components/profile/profilepage'
+import Search from './components/search/searchpage'
 
-// import Header from "./components/common/header/Header"
-
-// import Footer from "./footer"
-
-import Homepages from "./components/home/Homepages"
-
-import AboutUs from "./AboutUsPage"
-
-import Preferences from "./PreferencePage"
-
-import Contact from "./components/contact/contactpage"
-
-import Temp from "./temp"
-
-import Profile from "./components/profile/profilepage"
-
+// import Bootstrap from "./components/news-bootstrap/bootstrap"
 
 
 function App() {
   return (
-    <div class="container">
-      {/* <Header /> */}
+    <>
       <Routes>
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/login" element={<Loginpage />} />
+        <Route path="/" element={<Loginpage />} />
         <Route path="/home" element={<Homepages />} />
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/preferences" element={<PreferencePage />} />
         <Route path="/contactus" element={<Contact />} />
-        <Route path="/preferences" element={<Preferences />} />
+        <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/lol" element={<Temp />} />
-        {/* <Route path="/preference" element={<PreferencePage />} /> */}
-      </Routes>
-      {/* <Footer /> */}
-      </div>
-    
+        <Route path="/search" element={<Search />} />
+        {/* <Route path="/boot" element={<Bootstrap />} /> */}
+        </Routes>
+  
+    </>
   );
 }
 

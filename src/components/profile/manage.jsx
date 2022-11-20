@@ -1,13 +1,13 @@
 import React from "react";
 
-import "./profile.css"
+import "./manage.css"
 
 const manage = () => {
   return (
     <section id="manage">
       <h2>Manage</h2>
-      <br></br>
-      <div className="container manage__container" style={{ width: "14%" }}>
+      <br />
+      <div className="managing_container">
         <button type="submit" className="btn btn-primary button-spacing">
           Friends
         </button>

@@ -1,0 +1,32 @@
+.container-h {
+    max-width: 95%;
+    margin: auto;
+  }
+
+.search-bar{
+    padding-right: 50px;
+}
+
+.search-button{
+    align-self: center;
+}
+
+.searchbutton {
+    background-color: rgba(249, 13, 13, 0.71);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: 0.4s;
+    margin-left: 30px;
+  }
+
+  .searchbutton:hover {
+    background: transparent;
+    cursor: pointer;
+    border: 2px solid #f9004d;
+    color: #f9004d;
+  }
+  
