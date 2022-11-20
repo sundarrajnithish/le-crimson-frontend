@@ -1,52 +1,65 @@
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
-import React, { useState, useEffect } from "react"
+import React, { useState } from 'react';
 import arrayShuffle from "array-shuffle"
+import "./search.css"
 
-const SearchBar = ({ searchQuery, setSearchQuery }) => {
-    const history = useNavigate();
-    const [items, setItems] = useState([])
-  
-    useEffect(() => {
-      const getItems = async () => {
-        let search = "trending"
-          const response = await axios.get('https://lecrimson-backend.herokuapp.com/news/search?q='+searchQuery+'&location=CA')
-          console.log(searchQuery)
-          console.log('https://lecrimson-backend.herokuapp.com/news/search?q='+searchQuery+'&location=CA')
-          console.log(response.data, "At Hero1")
-          setItems(arrayShuffle(response.data))
-      }
-          getItems()
-  }, [])
 
-    const onSubmit = (e) => {
-        history.push(`?s=${searchQuery}`);
+
+const SearchBar = () => {
+    const [searchQuery, setSearchQuery] = useState('');
+    // const history = useNavigate();
+
+    const onSubmit = e => {
+        // history.push(`?s=${searchQuery}`);
+        console.log("submit ran")
         e.preventDefault();
+
+        console.log(searchQuery, "Printing Search Query")
+        localStorage.setItem('search-key', JSON.stringify(searchQuery));
+        console.log(localStorage.getItem("search-key")," *Search Key in Local Storage");
+        
     };
 
+    
+
     return (
+        
         <form
             action="/search"
             method="get"
             autoComplete="off"
             onSubmit={onSubmit}
         >
-            <label htmlFor="header-search">
+            {/* <label htmlFor="header-search">
                 <span className="visually-hidden">
                     
                 </span>
-            </label>
+            </label> */}
+            <div className='search-bar'>
             <input
                 value={searchQuery}
-                onInput={(e) => setSearchQuery(e.target.value)}
+                // onInput={(e) => setSearchQuery(e.target.value)}
+                onChange={e => setSearchQuery(e.target.value)}
                 type="text"
-                id="header-search"
+                id="search-data"
                 placeholder="Search News..."
-                name="s"
-            />
-            <button type="submit">Search</button>
+                name="search-data"
+            /> 
+            </div>
+            <div className='search-button'>
+            <button className='searchbutton' type="submit">Search</button>
+            </div>
         </form>
+
+        
+        
+        
     );
 };
+
+
+
+
 
 export default SearchBar;

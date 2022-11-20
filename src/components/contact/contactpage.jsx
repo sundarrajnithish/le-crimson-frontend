@@ -1,6 +1,6 @@
 import Header from "../common/header/Header"
 import Contact from "./Contact"
-import Footer from "./footer"
+import Footer from "../common/footer/footer"
 
 const Homepages = () => {
     return (
@@ -10,10 +10,10 @@ const Homepages = () => {
         <br />
         <Contact />
         </div>
+        {/* <br />
         <br />
         <br />
-        <br />
-        <br />
+        <br /> */}
         <Footer />
         </>
 

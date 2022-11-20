@@ -1,12 +1,12 @@
 import React from "react"
-import "./header.module.css"
+import "./header.css"
 const Head = () => {
   return (
     <>
       <section className='head'>
         <div className='container flexSB paddingTB'>
-          <div className='logo'>
-            <img src={require('./logo.png')} width="400px" alt='' />
+          <div>
+            <img src={require('./logo.png')} />
           </div>
           <div className='ad'>
             {/* <img src='../images/headerb.png' alt='' /> */}
