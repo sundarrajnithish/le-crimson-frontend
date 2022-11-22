@@ -17,7 +17,9 @@ const Music = () => {
   }
   let test = JSON.parse(localStorage.getItem('home-news'))
   console.log(test, "test at music")
-  console.log("Im feee")
+  var el = document.createElement('html')
+  el.innerHTML = test[0].description
+  console.log(el, "HTML Desc (21/11/2022)")
   return (
     <>
       <section className='music'>
@@ -42,7 +44,7 @@ const Music = () => {
                           <i class='fas fa-calendar-days'></i>
                           <label>{val.date}</label>
                         </div>
-                        <p className='desc'>{"Testing"}...</p>
+                        <p className='desc'>{"A good paragraph should have a clear internal structure with an opening, development and ending. Each paragraph should deal with one idea or aspect of an idea, and it should be clear to the reader what this main idea is. This idea is usually shown in the topic sentence (see next section)."}...</p>
                         {/* val.description.slice(0, 250) */}
                         <div className='comment'>
                           <i class='fas fa-share'></i>
