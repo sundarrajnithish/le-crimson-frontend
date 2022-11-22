@@ -33,8 +33,8 @@ const Home = () => {
     <table className="table">
   <thead>
     <tr>
-      <th scope="col">No.</th>
-      <th scope="col">News Title</th>
+      {/* <th scope="col">No.</th>
+      <th scope="col">News Title</th> */}
       {/* <th scope="col">News Description</th> */}
       {/* <th scope="col">News Image </th> */}
     </tr>
@@ -47,7 +47,16 @@ return(
   <tbody  key={index}>
     <tr>
       <th scope="row">{index+1}</th>
-      <td><a href = {value.sourceUrl}>{value.headlines}</a></td>
+      <th />
+      <th />
+      <th />
+      <th />
+      <th />
+      <th />
+      <td><a href = {value.articleUrl}>{value.headlines}</a></td>
+      <td><a href = {value.sourceUrl}>{value.sourceName}</a></td>
+      <td>{value.publishDate}</td>
+      
       {/* <td>{value.description}.... :- <a href={value.sourceUrl} rel="noreferrer" target="_blank">more about news</a></td> */}
       {/* <td className='rowClass' style={{objectFit:"contain",backgroundColor:"blue"}}><img className='newsclass' src={value.urlToImage} alt="" /></td> */}
     </tr>

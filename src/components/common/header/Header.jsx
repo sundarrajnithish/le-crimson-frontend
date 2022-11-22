@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
 
-  const items = JSON.parse(localStorage.getItem('lol'));
+  const items = JSON.parse(localStorage.getItem('preferences'));
 
   var vari1 = "/" + items[0]
   var vari2 = "/" + items[1]
