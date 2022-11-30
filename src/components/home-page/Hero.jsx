@@ -14,7 +14,7 @@ const Hero = () => {
   useEffect(() => {
     const getItems = async () => {
         const response = await axios.get('https://newsapi.org/v2/everything?q='+search_term+'&apiKey=7d74996a3f8f466397819242b422b2a3')
-        console.log(response.data, "At Hero")
+        console.log(response.data, "At Hero (NewsAPI Data)")
         setItems(arrayShuffle(response.data.articles))
         // console.log(items, "Before Shuffling")
         // items = arrayShuffle(items)

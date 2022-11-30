@@ -1,9 +1,8 @@
-import React from 'react'
 import {MdOutlineMailOutline} from 'react-icons/md'
 import './contactmodule.css'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com'
-
+import React, { useState, useEffect } from "react"
 import Heading from "../common/heading/Heading"
 
 
@@ -15,7 +14,23 @@ const Contact = () => {
     emailjs.sendForm('service_cxf2g9f', 'template_40rusc5', form.current, 'KXBWP1G6_NePQW41h')
     e.target.reset()
   };
+  const [searchQuery, setSearchQuery] = useState('');
+    // const history = useNavigate();
+
+  const onSubmit = e => {
+        // history.push(`?s=${searchQuery}`);
+        console.log("submit ran")
+        // e.preventDefault();
+
+        console.log(searchQuery, "Printing Search Query")
+        localStorage.setItem('email-key', JSON.stringify(searchQuery));
+        console.log(localStorage.getItem("email-key")," *Email Key in Local Storage");
+        
+    };
+    let email_id =  "mailto:" + JSON.parse(localStorage.getItem("email-key"))
+    console.log(email_id, "the email id")
   return (
+    
     <section id='contact'>
       
       <Heading title='Contact Us' />
@@ -28,7 +43,19 @@ const Contact = () => {
             <MdOutlineMailOutline className='contact__option-icon'/>
             <h4>Email</h4>
             <h5></h5>
-            <a href='mailto:'>Send a message</a>
+            <form onSubmit={onSubmit}>
+            <input className='input-box'
+                value={searchQuery}
+                // onInput={(e) => setSearchQuery(e.target.value)}
+                onChange={e => setSearchQuery(e.target.value)}
+                type="text"
+                id="search-data"
+                placeholder="Enter Email"
+                name="search-data"
+            /> 
+            
+            <a href= {email_id} type='submit'>Send a message</a>
+            </form>
           </article>
         </div>
         <form ref={form} onSubmit = {sendEmail}>

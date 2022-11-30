@@ -16,7 +16,7 @@ import axios from "axios";
 function CheckCircle() {
   const [checkedValues, setValue] = useState([]);
   useEffect(() => {
-    localStorage.setItem('lol', JSON.stringify(checkedValues));
+    localStorage.setItem('preferences', JSON.stringify(checkedValues));
   }, [checkedValues]);
 
   function handleChange(event) {
