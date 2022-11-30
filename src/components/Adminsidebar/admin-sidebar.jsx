@@ -9,26 +9,33 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
 import PsychologyIcon from "@mui/icons-material/Psychology";
+import { Link } from "react-router-dom";
 
 const AdminSide = () => {
   return (
     <div className="admin-Sidebar">
       <div className="top">
-        <span className="a-logo">leCrimson</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="a-logo">leCrimson</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="side-title">MAIN</p>
-          <li>
-            <DashboardIcon className="side-icons" />
-            <span className="side-span">Dashboard</span>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li>
+              <DashboardIcon className="side-icons" />
+              <span className="side-span">Dashboard</span>
+            </li>
+          </Link>
           <p className="side-title">MAIN</p>
-          <li>
-            <PeopleAltSharpIcon className="side-icons" />
-            <span className="side-span">Users</span>
-          </li>
+          <Link to="/users" style={{ textDecoration: "none" }}>
+            <li>
+              <PeopleAltSharpIcon className="side-icons" />
+              <span className="side-span">Users</span>
+            </li>
+          </Link>
           <li>
             <CategoryIcon className="side-icons" />
             <span className="side-span">Categories</span>

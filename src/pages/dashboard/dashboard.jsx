@@ -2,8 +2,9 @@ import "./dashboard.css";
 import AdminSide from "../../components/Adminsidebar/admin-sidebar";
 import AdminNavigationbar from "../../components/Adminnavbar/admin-navbar";
 import AdminWidget from "../../components/AdminWidget/admin-widgets";
-import AdminCharts from "../../components/AdminCharts/adminchart";
+import AdminCharts2 from "../../components/AdminCharts/adminchartbar";
 import AdminFeatures from "../../components/AdminFeatures/adminfeatures";
+import AdminTable from "../../components/table/admin-table";
 
 const Dashboard = () => {
   return (
@@ -19,7 +20,11 @@ const Dashboard = () => {
         </div>
         <div className="admin-charts">
           <AdminFeatures />
-          <AdminCharts />
+          <AdminCharts2 />
+        </div>
+        <div className="admin-list-container">
+          <div className="admin-list-title">Active User list</div>
+          <AdminTable />
         </div>
       </div>
     </div>
