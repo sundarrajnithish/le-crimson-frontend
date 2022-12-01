@@ -72,6 +72,9 @@ const Header = () => {
                 <Link to="/search">Search</Link>
               </li>
               <li>
+                <Link to="/chat">Chat</Link>
+              </li>
+              <li>
                 <Link to={vari1}>{items[0]}</Link>
               </li>
               <li>

@@ -16,6 +16,42 @@ import Search from './components/search/searchpage'
 
 // import Bootstrap from "./components/news-bootstrap/bootstrap"
 
+// Comet Chat Components
+import { CometChat } from "@cometchat-pro/chat";
+import * as CONSTANTS from "./constants/constants";
+import { CometChatUI } from "./cometchat-pro-react-ui-kit/CometChatWorkspace/src/components";
+
+import Chatpage from "./components/chatpage/chatpage"
+
+
+const uid = "user1";
+
+const appid = CONSTANTS.APP_ID;
+const region = CONSTANTS.APP_REGION;
+const authKey = CONSTANTS.AUTH_KEY;
+const appSetting = new CometChat.AppSettingsBuilder()
+  .subscribePresenceForAllUsers()
+  .setRegion(region)
+  .build();
+
+  CometChat.login(uid, authKey).then(
+    (user) => {
+      console.log("Login Successful:", { user });
+    },
+    (error) => {
+      console.log("Login failed with exception:", { error });
+    }
+  );
+
+CometChat.init(appid, appSetting).then(
+  () => {
+    console.log("Initialization completed successfully");
+  },
+  (error) => {
+    console.log("Initialization failed with error:", error);
+    // Check the reason for error and take appropriate action.
+  }
+);
 
 function App() {
   return (
@@ -28,6 +64,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/chat" element={<Chatpage />} />
         {/* <Route path="/boot" element={<Bootstrap />} /> */}
         </Routes>
   

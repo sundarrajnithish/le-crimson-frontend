@@ -12,6 +12,8 @@ import Popular from "./popular/Popular"
 
 import Music from "./musics/Music"
 
+
+
 import "./homepages.css"
 // import Footer from "../common/footer/footer"
 
@@ -25,7 +27,7 @@ const Homepages = () => {
       <Heading title="News" />
       <Hero />
       <Popular />
-      <Music />
+      {/* <Music /> */}
       <br />
       <Footer />
       </div>
