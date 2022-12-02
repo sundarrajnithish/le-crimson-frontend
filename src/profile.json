@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "firstName": "kiran",
+    "lastName": "kishore",
+    "email": "kk@gmail.com",
+    "profilePic": "",
+    "loginSource": "Gmail",
+    "location": null,
+    "favCategory": "[]",
+    "friends": [
+      {
+        "id": 5,
+        "friendId": 4,
+        "userId": 1,
+        "friendProfileName": "nitish sundarraj",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      }
+    ],
+    "blocked": []
+  },
+  {
+    "id": 2,
+    "firstName": "raga",
+    "lastName": "priya",
+    "email": "rp@gmail.com",
+    "profilePic": "",
+    "loginSource": "Gmail",
+    "location": null,
+    "favCategory": "[]",
+    "friends": [
+      {
+        "id": 1,
+        "friendId": 1,
+        "userId": 2,
+        "friendProfileName": "kiran kishore",
+        "friendStatus": "Pending"
+      },
+      {
+        "id": 6,
+        "friendId": 5,
+        "userId": 2,
+        "friendProfileName": "nabeel dean",
+        "friendStatus": "Confirmed"
+      },
+      {
+        "id": 7,
+        "friendId": 5,
+        "userId": 2,
+        "friendProfileName": "nabeel dean",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [
+      {
+        "id": 4,
+        "followerId": 4,
+        "userId": 2,
+        "followerProfileName": "nitish sundarraj"
+      }
+    ],
+    "blocked": []
+  },
+  {
+    "id": 3,
+    "firstName": "sindhiya",
+    "lastName": "selvaram",
+    "email": "ss@gmail.com",
+    "profilePic": "",
+    "loginSource": "FaceBook",
+    "location": null,
+    "favCategory": "[]",
+    "friends": [],
+    "followers": [],
+    "blocked": []
+  },
+  {
+    "id": 4,
+    "firstName": "nitish",
+    "lastName": "sundarraj",
+    "email": "ns@gmail.com",
+    "profilePic": "",
+    "loginSource": "FaceBook",
+    "location": null,
+    "favCategory": "[]",
+    "friends": [
+      {
+        "id": 9,
+        "friendId": 3,
+        "userId": 4,
+        "friendProfileName": "sindhiya selvaram",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [],
+    "blocked": []
+  },
+  {
+    "id": 5,
+    "firstName": "nabeel",
+    "lastName": "dean",
+    "email": "nd@gmail.com",
+    "profilePic": "",
+    "loginSource": "Gmail",
+    "location": null,
+    "favCategory": "[]",
+    "friends": [],
+    "followers": [],
+    "blocked": []
+  }
+]

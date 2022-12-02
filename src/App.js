@@ -1,37 +1,25 @@
-// CSS Files
-import './App.css';
+import "./App.css";
+import ProfileCommunication from "./Pages/ProfileCommunication/profileCommunication";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Imports
-import React from 'react'
-import Loginpage from './components/login-page/Loginpage';
-import { Routes, Route } from "react-router-dom";
-import Homepages from './components/home-page/Homepages';
-import PreferencePage from './components/preferences/PreferencePage';
-import Contact from './components/contact/contactpage';
-import AboutUsPage from './components/about/AboutUsPage';
-import Profile from './components/profile/profilepage'
-import Search from './components/search/searchpage'
-
-// import Cometchat from "./components/social/cometchat"
-
-// import Bootstrap from "./components/news-bootstrap/bootstrap"
-
+import FriendPage from "./Components/FriendsTable/friendPage";
+import FollowerPage from "./Components/FollowerTable/followerPage";
+import BlockedUserPage from "./Components/BlockTable/BlockedPage";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Loginpage />} />
-        <Route path="/home" element={<Homepages />} />
-        <Route path="/preferences" element={<PreferencePage />} />
-        <Route path="/contactus" element={<Contact />} />
-        <Route path="/aboutus" element={<AboutUsPage />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/search" element={<Search />} />
-        {/* <Route path="/boot" element={<Bootstrap />} /> */}
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<ProfileCommunication />} />
+          </Route>
+          <Route path="/followers" element={<FollowerPage />} />
+          <Route path="/friends" element={<FriendPage />} />
+          <Route path="/blocked" element={<BlockedUserPage />} />
         </Routes>
-  
-    </>
+      </BrowserRouter>
+    </div>
   );
 }
 
