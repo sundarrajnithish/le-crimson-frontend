@@ -42,7 +42,7 @@ function Loginpage() {
         <img class="i" src={require("./logo.png")} alt="Company Logo" />
 
         <GLogin response={Response}/>
-        <LoginFB />
+        {/* <LoginFB /> */}
       </div>
     </div>
   );

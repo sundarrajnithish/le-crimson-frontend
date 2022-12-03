@@ -1,31 +1,42 @@
 // CSS Files
-import './App.css';
+import "./App.css";
 
 // Imports
-import React from 'react'
-import Loginpage from './components/login-page/Loginpage';
+import React from "react";
+import Loginpage from "./components/login-page/Loginpage";
 import { Routes, Route } from "react-router-dom";
-import Homepages from './components/home-page/Homepages';
-import PreferencePage from './components/preferences/PreferencePage';
-import Contact from './components/contact/contactpage';
-import AboutUsPage from './components/about/AboutUsPage';
-import Profile from './components/profile/profilepage'
-import Search from './components/search/searchpage'
-
-// import Cometchat from "./components/social/cometchat"
-
-// import Bootstrap from "./components/news-bootstrap/bootstrap"
+import Homepages from "./components/home-page/Homepages";
+import PreferencePage from "./components/preferences/PreferencePage";
+import Contact from "./components/contact/contactpage";
+import AboutUsPage from "./components/about/AboutUsPage";
+import Profile from "./components/profile/profilepage";
+import Search from "./components/search/searchpage";
+import Dashboard from "./components/Admin/dashboard/dashboard";
+import SingleUser from "./components/profile/admin-singleuser";
+import AdminList from "./components/Admin/AdminList/admin-list";
 
 // Comet Chat Components
 import { CometChat } from "@cometchat-pro/chat";
 import * as CONSTANTS from "./constants/constants";
-import { CometChatUI } from "./cometchat-pro-react-ui-kit/CometChatWorkspace/src/components";
+// import { CometChatUI } from "./cometchat-pro-react-ui-kit/CometChatWorkspace/src/components";
 
-import Chatpage from "./components/chatpage/chatpage"
+import Chatpage from "./components/chatpage/chatpage";
 
+import Zero from "./components/test/db_test";
+
+//const name = "ss";
+//var user = new CometChat.User(uid);
+//user.setName(name);
+//CometChat.createUser(user, authKey).then(
+// (user) => {
+//  console.log("user created", user);
+// },
+//(error) => {
+//   console.log("error", error);
+// }
+//);
 
 const uid = "user1";
-
 const appid = CONSTANTS.APP_ID;
 const region = CONSTANTS.APP_REGION;
 const authKey = CONSTANTS.AUTH_KEY;
@@ -34,14 +45,14 @@ const appSetting = new CometChat.AppSettingsBuilder()
   .setRegion(region)
   .build();
 
-  CometChat.login(uid, authKey).then(
-    (user) => {
-      console.log("Login Successful:", { user });
-    },
-    (error) => {
-      console.log("Login failed with exception:", { error });
-    }
-  );
+CometChat.login(uid, authKey).then(
+  (user) => {
+    console.log("Login Successful:", { user });
+  },
+  (error) => {
+    console.log("Login failed with exception:", { error });
+  }
+);
 
 CometChat.init(appid, appSetting).then(
   () => {
@@ -57,6 +68,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Loginpage />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/home" element={<Homepages />} />
         <Route path="/preferences" element={<PreferencePage />} />
@@ -65,9 +77,12 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/search" element={<Search />} />
         <Route path="/chat" element={<Chatpage />} />
+        <Route path="/temp" element={<Zero />} />
+        <Route path="/users" element={<AdminList />} />
+        <Route path="/single" element={<SingleUser />} />
+        <Route path="/admin" element={<Dashboard />} />
         {/* <Route path="/boot" element={<Bootstrap />} /> */}
-        </Routes>
-  
+      </Routes>
     </>
   );
 }

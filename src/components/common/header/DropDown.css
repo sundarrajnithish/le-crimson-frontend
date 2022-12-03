@@ -12,7 +12,7 @@ a {
 
 .menu-trigger img {
   position: absolute;
-  top: 225px;
+  top: 185px;
   right: 70px;
   height: 50px;
   width: 50px;
@@ -24,7 +24,7 @@ a {
 
 .dropdown-menu {
   position: absolute;
-  top: 270px;
+  top: 150px;
   right: 50px;
   background-color: rgb(11, 11, 11);
   border-radius: var(--border-radius);

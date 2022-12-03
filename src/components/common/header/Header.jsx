@@ -4,8 +4,6 @@ import "./header.css";
 import DropDownProfile from "./DropDownProfile";
 import { Link } from "react-router-dom";
 
-
-
 // const Stinger = () => {
 //   const itemsforvar = JSON.parse(localStorage.getItem('lol'));
 
@@ -15,31 +13,30 @@ import { Link } from "react-router-dom";
 
 //   return (
 //    <>
-    
+
 //    </>
 //   )
 // }
 
 // Stinger();
 
-
-
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+  // axios.put("https://lecrimson-backend.herokuapp.com/profile"
 
-  const items = JSON.parse(localStorage.getItem('preferences'));
+  const items = JSON.parse(localStorage.getItem("preferences"));
 
-  var vari1 = "/" + items[0]
-  var vari2 = "/" + items[1]
-  var vari3 = "/" + items[2]
-  var vari4 = "/" + items[3]
-  var vari5 = "/" + items[4]
-  var vari6 = "/" + items[5]
-  var vari7 = "/" + items[6]
-  var vari8 = "/" + items[7]
-  var vari9 = "/" + items[8]
+  var vari1 = "/" + items[0];
+  var vari2 = "/" + items[1];
+  var vari3 = "/" + items[2];
+  var vari4 = "/" + items[3];
+  var vari5 = "/" + items[4];
+  var vari6 = "/" + items[5];
+  var vari7 = "/" + items[6];
+  var vari8 = "/" + items[7];
+  var vari9 = "/" + items[8];
 
-  console.log(items, "Preference Data Received in Header.jsx")
+  console.log(items, "Preference Data Received in Header.jsx");
 
   return (
     <>
@@ -61,11 +58,11 @@ const Header = () => {
               <li>
                 <Link to="/home">Home</Link>
               </li>
-      
+
               {/* <li>
                 <Link to="/social">Social</Link>
               </li> */}
-               <li>
+              <li>
                 <Link to="/preferences">Preferences</Link>
               </li>
               <li>
@@ -73,6 +70,9 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/chat">Chat</Link>
+              </li>
+              <li>
+                <Link to="/admin">Admin</Link>
               </li>
               <li>
                 <Link to={vari1}>{items[0]}</Link>
@@ -101,26 +101,19 @@ const Header = () => {
               <li>
                 <Link to={vari9}>{items[8]}</Link>
               </li>
-              
+
               {/* <li>
                 <Link to="/AboutUs">About Us</Link>
               </li>
               <li>
                 <Link to="/contactus">Contact Us</Link>
               </li> */}
-              <ul>
-                
-              </ul>
-              <ul>
-
-              </ul>
+              <ul></ul>
+              <ul></ul>
               <ul>
                 <DropDownProfile />
               </ul>
-              <ul>
-
-              </ul>
-              
+              <ul></ul>
             </ul>
           </nav>
         </div>
