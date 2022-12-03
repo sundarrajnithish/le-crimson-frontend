@@ -66,7 +66,7 @@ console.log(popular, "this is popular")
                   <div className='box shadow'>
                     <div className='images row'>
                       <div className='img'>
-                        <img src={"../images/popular/pop1.jpg"} alt='' />
+                        <img src={val.cover} alt='' />
                       </div>
                       {/* <div class='category category1'>
                         <span>{val.catgeory}</span>

@@ -5,6 +5,7 @@ import { CometChat } from '@cometchat-pro/chat';
 
 import Header from "../common/header/Header"
 
+import "./chatpage.css"
 
 const uid = "user1";
 
@@ -39,7 +40,9 @@ const chatpage = () => {
   return (
     <>
     <Header />
+    <div className='chat-ui'>
     <CometChatUI />
+    </div>
     </>
   )
 }

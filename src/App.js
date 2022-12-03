@@ -12,20 +12,29 @@ import AboutUsPage from './components/about/AboutUsPage';
 import Profile from './components/profile/profilepage'
 import Search from './components/search/searchpage'
 
-// import Cometchat from "./components/social/cometchat"
-
-// import Bootstrap from "./components/news-bootstrap/bootstrap"
-
 // Comet Chat Components
 import { CometChat } from "@cometchat-pro/chat";
 import * as CONSTANTS from "./constants/constants";
-import { CometChatUI } from "./cometchat-pro-react-ui-kit/CometChatWorkspace/src/components";
+// import { CometChatUI } from "./cometchat-pro-react-ui-kit/CometChatWorkspace/src/components";
 
 import Chatpage from "./components/chatpage/chatpage"
 
+import Zero from './components/test/db_test';
+
+//const name = "ss";
+//var user = new CometChat.User(uid);
+//user.setName(name);
+//CometChat.createUser(user, authKey).then(
+// (user) => {
+//  console.log("user created", user);
+// },
+//(error) => {
+//   console.log("error", error);
+// }
+//);
+
 
 const uid = "user1";
-
 const appid = CONSTANTS.APP_ID;
 const region = CONSTANTS.APP_REGION;
 const authKey = CONSTANTS.AUTH_KEY;
@@ -57,6 +66,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<Loginpage />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/home" element={<Homepages />} />
         <Route path="/preferences" element={<PreferencePage />} />
@@ -65,6 +75,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/search" element={<Search />} />
         <Route path="/chat" element={<Chatpage />} />
+        <Route path='/temp' element={<Zero />} />
         {/* <Route path="/boot" element={<Bootstrap />} /> */}
         </Routes>
   

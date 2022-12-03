@@ -26,6 +26,9 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+  // axios.put("https://lecrimson-backend.herokuapp.com/profile"
+
+
 
   const items = JSON.parse(localStorage.getItem('preferences'));
 

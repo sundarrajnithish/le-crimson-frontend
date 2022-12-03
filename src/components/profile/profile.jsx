@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import "./profile.css";
 function profile() {
     const items = JSON.parse(localStorage.getItem('login'));
@@ -14,6 +15,8 @@ function profile() {
 
   };
   return (
+    <>
+    
     <profile>
       <div className="container profile__container">
         <div className="profile__item">
@@ -30,6 +33,7 @@ function profile() {
         </div>
       </div>
     </profile>
+    </>
   );
 };
 
