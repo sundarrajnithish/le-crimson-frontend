@@ -10,9 +10,9 @@ import Profilepage from "./components/pages/profile/profilepage";
 import PreferencePage from "./components/preferences/common/PreferencePage";
 import Searchpage from "./components/search/searchpage";
 
-// import Chatpage from "./components/pages/chat_page/chatpage";
+import Chatpage from "./components/pages/chat_page/chatpage";
 
-// import "./components/chat/cometchat"
+import "./components/chat/cometchat"
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
         <Route path= "/profile" element={<Profilepage />} />
         <Route path= "/preferences" element={<PreferencePage />} />
         <Route path= "/search" element={<Searchpage />} />
-        {/* <Route path= "/chat" element={<Chatpage />} /> */}
+        <Route path= "/chat" element={<Chatpage />} />
     </Routes>
     </>
   )
