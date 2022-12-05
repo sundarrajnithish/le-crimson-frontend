@@ -26,8 +26,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
+  // axios.put("https://lecrimson-backend.herokuapp.com/profile"
 
-  const items = JSON.parse(localStorage.getItem('lol'));
+
+
+  const items = JSON.parse(localStorage.getItem('live-preferences'));
 
   var vari1 = "/" + items[0]
   var vari2 = "/" + items[1]
@@ -70,6 +73,9 @@ const Header = () => {
               </li>
               <li>
                 <Link to="/search">Search</Link>
+              </li>
+              <li>
+                <Link to="/chat">Chat</Link>
               </li>
               <li>
                 <Link to={vari1}>{items[0]}</Link>

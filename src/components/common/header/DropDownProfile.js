@@ -8,26 +8,8 @@ import {Link} from "react-router-dom"
 function DropDownProfile() {
   const [open, setOpen] = useState(false);
 
-  const items = JSON.parse(localStorage.getItem('login'));
-  console.log(items["profileObj"]["name"])
-  console.log(items["profileObj"]["imageUrl"])
+  const items = JSON.parse(localStorage.getItem('login-data'));
 
-  let menuRef = useRef();
-
-  useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        setOpen(false);
-        console.log(menuRef.current);
-      }
-    };
-
-    document.addEventListener("mousedown", handler);
-
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  });
   return (
     <>
       <div className="menu-container">
@@ -45,7 +27,7 @@ function DropDownProfile() {
             <Link to='/profile'>
             <DropDownItem text={"My Profile"} />
             </Link>
-            <Link to='/login'>
+            <Link to='/'>
             <DropDownItem text={"Logout"} />
             </Link>
           </ul>
@@ -57,7 +39,7 @@ function DropDownProfile() {
 function DropDownItem(props) {
   return (
     <li className="dropitems">
-      <a>{props.text}</a>
+      {props.text}
     </li>
   );
 }
