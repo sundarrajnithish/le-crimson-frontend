@@ -1,32 +1,18 @@
-import LoginFB from "../facebook-login/FBAuth";
-import GLogin from "../google-login/GAuth";
-// import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import GLogin from "../google-login/GAuth";
+
 import "./Login.css"
-
-
-  
-
 
 function Loginpage() {
   const [stateAuth, setStateAuth] = useState();
   
   const Response = (res) => {
-    localStorage.setItem('login', JSON.stringify(res));
-    
-
-    // const [res, setValue] = useState([]);
-    // useEffect(() => {
-    //   localStorage.setItem('login', JSON.stringify(res));
-    // }, [res]);
-    
-
-    console.log(res, "GAuth Received Data");
-    console.log(localStorage.getItem("login")," *GAuth in Local Storage");
+    localStorage.setItem('login-data', JSON.stringify(res));
+    console.log(JSON.parse(localStorage.getItem("login-data"))," *GAuth in Local Storage");
   };
    const [res, setValue] = useState([]);
     useEffect(() => {
-      localStorage.setItem('login', JSON.stringify(res));
+      localStorage.setItem('login-data', JSON.stringify(res));
     }, [res]);
   
   // let navigate = useNavigate();
@@ -36,13 +22,10 @@ function Loginpage() {
   // };
 
   return (
-    <div class="container-L">
-      {/* <button onClick={route}>preferencetrial</button> */}
-      <div class="login_box">
-        <img class="i" src={require("./logo.png")} alt="Company Logo" />
-
+    <div className="container-L">
+      <div className="login_box">
+        <img className="i" src={require("./logo.png")} alt="Company Logo" />
         <GLogin response={Response}/>
-        {/* <LoginFB /> */}
       </div>
     </div>
   );

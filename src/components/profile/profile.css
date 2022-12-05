@@ -1,70 +1,85 @@
-.ProfileComm {
-    display: flex;
-  }
-  .ProfileCommContainer {
-    flex: 4;
-  }
-  .profile-card-comm-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    padding: 10px;
-  
-    border-radius: 10px;
-    height: 500px;
-    width: 720px;
-    margin: 50px;
-  }
-  
-
-.profile__container{
-    height: 50vh;
-    padding-top: 7rem;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.profile__item{
-    padding: 10px;
-    text-align: left;
-}
-.location__container {
-    display: grid;
-    grid-template-columns: auto auto;
-    width: 300px;
-}
-/*=================MAN========*/
-.me {
-    width: 20rem;
-    height: 15rem;
-    position: absolute;
-    left: calc(50%- 7.5rem);
-     border-radius: 0%;
+.singleuser {
+  display: flex;
+  align-items: center ;
+  width: 100%;
 }
 
-.btn{
-    width: max-content;
-    display: -ms-inline-grid;
-    color: var(--color-primary);
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    border: 1px solid var(--color-primary); 
-    transition: var(--transition);
+.singleusercontainer {
+  justify-content: center;
+  flex: 4;
 }
 
-.btn:hover{
-    background-color: var(--color-white);
-    color: var(--color-bg);
-    border-color: transparent;
+.singleuser-top {
+  padding: 40px;
+  display: flex;
+  gap: 20px;
+  margin-left: 250px;
 }
 
-.button-spacing{
-    margin-left: 10px;
+.singleuser-left {
+  flex: 2;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  position: relative;
+  margin-left: 18%;
 }
 
-.image{
-    padding-left: 100px;
-    width: 300px;
+.singleuser-item {
+  display: flex;
+  gap: 50px;
+}
+.singleuser-item-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.singleuser-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  font-size: 12px;
+  color: #7451f8;
+  background-color: #7551f87a;
+  cursor: pointer;
+  border-radius: 0px 0px 0px 5px;
+}
+
+.singleuser-right {
+  flex: 2;
+}
+.singleuser-name {
+  margin-bottom: 10px;
+  color: #555;
+}
+.singleuser-items {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.detailsKey {
+  font-weight: bold;
+  color: grey;
+  margin-right: 5px;
+}
+
+.detailsValue {
+  font-weight: 300;
+}
+
+.singleuser-title {
+  font-size: 16px;
+  color: lightgrey;
+  margin-bottom: 20px;
+}
+
+.singleuser-bottom {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  margin: 10px 20px;
+  margin-left: 200px;
+  margin-right: 200px;
 }

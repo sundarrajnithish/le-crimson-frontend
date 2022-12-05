@@ -1,0 +1,32 @@
+.social-rightbar-friend {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.social-rightbar-friend-proImg-container {
+  margin-right: 10px;
+  position: relative;
+}
+
+.social-rightbar-friend-proImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.social-rightbar-online {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border: 2px solid white;
+}
+
+.social-rightbar-username {
+  font-weight: 500;
+}

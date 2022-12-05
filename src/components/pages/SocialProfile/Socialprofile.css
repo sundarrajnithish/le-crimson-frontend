@@ -1,0 +1,50 @@
+.social-profile-container {
+  display: flex;
+}
+
+.social-profile-right {
+  flex: 9;
+}
+
+.social-profile-cover {
+  height: 320px;
+  position: relative;
+}
+
+.social-profile-coverImg {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
+
+.social-profile-userImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 150px;
+  border: 3px solid white;
+}
+
+.social-profile-right-bottom {
+  display: flex;
+}
+
+.social-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-profile-info-name {
+  font-size: 24px;
+}
+
+.social-profile-info-desc {
+  font-size: 300;
+}

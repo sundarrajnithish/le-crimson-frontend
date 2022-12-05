@@ -24,7 +24,7 @@ const Header = () => {
   const [navbar, setNavbar] = useState(false);
   // axios.put("https://lecrimson-backend.herokuapp.com/profile"
 
-  const items = JSON.parse(localStorage.getItem("preferences"));
+  const items = JSON.parse(localStorage.getItem("live-preferences"));
 
   var vari1 = "/" + items[0];
   var vari2 = "/" + items[1];
@@ -59,9 +59,9 @@ const Header = () => {
                 <Link to="/home">Home</Link>
               </li>
 
-              {/* <li>
+              <li>
                 <Link to="/social">Social</Link>
-              </li> */}
+              </li>
               <li>
                 <Link to="/preferences">Preferences</Link>
               </li>
@@ -71,9 +71,7 @@ const Header = () => {
               <li>
                 <Link to="/chat">Chat</Link>
               </li>
-              <li>
-                <Link to="/admin">Admin</Link>
-              </li>
+
               <li>
                 <Link to={vari1}>{items[0]}</Link>
               </li>

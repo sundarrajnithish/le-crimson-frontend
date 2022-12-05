@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "firstName": "sam",
+    "lastName": "hike",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": [
+      {
+        "id": 5,
+        "friendId": 4,
+        "userId": 1,
+        "friendProfileName": "nitish sundarraj",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      },
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      }
+    ],
+    "blocked": []
+  },
+  {
+    "id": 1,
+    "firstName": "sam",
+    "lastName": "hike",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": [
+      {
+        "id": 5,
+        "friendId": 4,
+        "userId": 1,
+        "friendProfileName": "nitish sundarraj",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      },
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      }
+    ],
+    "blocked": []
+  },
+  {
+    "id": 1,
+    "firstName": "sam",
+    "lastName": "hike",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": [
+      {
+        "id": 5,
+        "friendId": 4,
+        "userId": 1,
+        "friendProfileName": "nitish sundarraj",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      },
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      }
+    ],
+    "blocked": []
+  },
+  {
+    "id": 1,
+    "firstName": "sam",
+    "lastName": "hike",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": [
+      {
+        "id": 5,
+        "friendId": 4,
+        "userId": 1,
+        "friendProfileName": "nitish sundarraj",
+        "friendStatus": "Confirmed"
+      }
+    ],
+    "followers": [
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      },
+      {
+        "id": 1,
+        "followerId": 2,
+        "userId": 1,
+        "followerProfileName": "raga priya"
+      },
+      {
+        "id": 2,
+        "followerId": 3,
+        "userId": 1,
+        "followerProfileName": "sindhiya selvaram"
+      }
+    ],
+    "blocked": []
+  }
+]
