@@ -28,8 +28,8 @@ function GLogin(props) {
   const FailureresponseGoogle = (response) => {
     console.log(response, "Failure Response");
     props.response(response);
-    let path = `/login`;
-    navigate(path)
+    // let path = `/login`;
+    // navigate(path)
   }
 
 
