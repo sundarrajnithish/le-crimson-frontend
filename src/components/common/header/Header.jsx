@@ -30,7 +30,7 @@ const Header = () => {
 
 
 
-  const items = JSON.parse(localStorage.getItem('preferences'));
+  const items = JSON.parse(localStorage.getItem('live-preferences'));
 
   var vari1 = "/" + items[0]
   var vari2 = "/" + items[1]

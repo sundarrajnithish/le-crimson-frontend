@@ -1,9 +1,10 @@
-import React from "react";
-
-
 import "./profile.css";
-function profile() {
-    const items = JSON.parse(localStorage.getItem('login'));
+
+//import AdminCharts1 from "../AdminCharts/adminChartspie";
+//import AdminTable from "../table/admin-table";
+const SingleUser = () => {
+
+  const items = JSON.parse(localStorage.getItem('login-data'));
     console.log(items["profileObj"]["name"])
     console.log(items["profileObj"]["imageUrl"])
 
@@ -15,26 +16,41 @@ function profile() {
 
   };
   return (
-    <>
-    
-    <profile>
-      <div className="container profile__container">
-        <div className="profile__item">
-          <div className="me">
-            <img className="image" src={items["profileObj"]["imageUrl"]} alt="man" />
+    <div className="singleuser">
+      <div className="singleusercontainer">
+        <div className="singleuser-top">
+          <div className="singleuser-left">
+            {/* <div className="singleuser-edit">Edit</div> */}
+            <h1 className="singleuser-title">Your Profile</h1>
+            <div className="singleuser-item">
+              <img className='singleuser-item-img' src={items["profileObj"]["imageUrl"]} />
+              <div className="singleuser-details">
+                <h1 className="singleuser-name">{respose_after_login.name}</h1>
+                <div className="singleuser-items">
+                  <span className="detailsKey">Email: </span>
+                  <span className="detailsValue">{respose_after_login.email}</span>
+                </div>
+                <div className="singleuser-items">
+                  <span className="detailsKey">Location: </span>
+                  <span className="detailsValue">IND </span>
+                </div>
+                <div className="singleuser-items">
+                  <span className="detailsKey">Preferences: </span>
+                  <span className="detailsValue">{(localStorage.getItem('preferences'))}</span>
+                </div>
+              </div>
+            </div>
           </div>
+          <div className="singleuser-right">{/*<AdminCharts1 />*/}</div>
         </div>
-        <div className="profile__item">
-          <h1>{respose_after_login.name}</h1>
-          <h4>Email: {respose_after_login.email}</h4>
-          <div className="location__container">
-            <h4>Location: {respose_after_login.location}</h4>
-          </div>
-        </div>
+        <br />
+        <div className="singleuser-bottom">
+          <h1 className="singleuser-title"> Your Timeline</h1>
+          {/* <AdminTable /> */}
+        </div> 
       </div>
-    </profile>
-    </>
+    // </div>
   );
 };
 
-export default profile;
+export default SingleUser;
