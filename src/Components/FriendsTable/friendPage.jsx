@@ -9,7 +9,6 @@ const FriendPage = () => {
       <ProfileCardSideBar />
 
       <div className="friendCommContainer">
-        <AdminNavigationbar />
         <hr />
         <div className="friendlist">
           <h2>Friends</h2>

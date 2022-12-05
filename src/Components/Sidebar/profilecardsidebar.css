@@ -44,15 +44,10 @@ ul {
 }
 
 .side-comm-span {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   color: rgb(31, 29, 29);
   margin-left: 10px;
-}
-
-.side-icons {
-  color: rgba(246, 106, 106, 0.831);
-  font-size: 18px;
 }
 
 .side-title {
@@ -61,4 +56,9 @@ ul {
   margin-bottom: 5px;
   color: rgb(11, 11, 11);
   font-weight: bold;
+}
+
+#icon {
+  color: rgb(225, 19, 19);
+  font-size: 20px;
 }

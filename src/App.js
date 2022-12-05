@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FriendPage from "./Components/FriendsTable/friendPage";
 import FollowerPage from "./Components/FollowerTable/followerPage";
 import BlockedUserPage from "./Components/BlockTable/BlockedPage";
+import SuggessionPage from "./Components/Suggessions/SuggessionPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/followers" element={<FollowerPage />} />
           <Route path="/friends" element={<FriendPage />} />
           <Route path="/blocked" element={<BlockedUserPage />} />
+          <Route path="/suggession" element={<SuggessionPage />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,12 +1,6 @@
 import "./profilecardsidebar.css";
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import Diversity3OutlinedIcon from "@mui/icons-material/Diversity3Outlined";
-import FollowTheSignsIcon from "@mui/icons-material/FollowTheSigns";
-import PersonAddIcon from "@mui/icons-material/PersonAdd";
-import NoAccountsIcon from "@mui/icons-material/NoAccounts";
-import ContactMailIcon from "@mui/icons-material/ContactMail";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import LogoutIcon from "@mui/icons-material/Logout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { Link } from "react-router-dom";
 
 const ProfileCardSideBar = () => {
@@ -27,7 +21,7 @@ const ProfileCardSideBar = () => {
           <p className="side-title">Main</p>
           <Link to="/" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <HomeOutlinedIcon className="side-icons" />
+              <i id="icon" class="fa-solid fa-house"></i>
               <span className="side-comm-span">Home</span>
             </li>
           </Link>
@@ -35,31 +29,32 @@ const ProfileCardSideBar = () => {
           <p className="side-title">User Settings</p>
           <Link to="/followers" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <FollowTheSignsIcon className="side-icons" />
+              <i id="icon" class="fa-regular fa-user"></i>
+
               <span className="side-comm-span">All Followers</span>
             </li>
           </Link>
           <Link to="/friends" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <Diversity3OutlinedIcon className="side-icons" />
+              <i id="icon" class="fa-solid fa-user-group"></i>
               <span className="side-comm-span">All Friends</span>
             </li>
           </Link>
           <Link to="/friend request" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <ContactMailIcon className="side-icons" />
+              <i id="icon" class="fa-solid fa-envelope-open-text"></i>
               <span className="side-comm-span">Friend Requests</span>
             </li>
           </Link>
           <Link to="/suggestions" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <PersonAddIcon className="side-icons" />
+              <i id="icon" class="fa-regular fa-address-book"></i>
               <span className="side-comm-span">Suggestions</span>
             </li>
           </Link>
           <Link to="/blocked" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <NoAccountsIcon className="side-icons" />
+              <i id="icon" class="fa-solid fa-user-lock"></i>
               <span className="side-comm-span">Blocked users</span>
             </li>
           </Link>
@@ -67,14 +62,14 @@ const ProfileCardSideBar = () => {
           <p className="side-title">Profile Settings</p>
           <Link to="/profile" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <AccountCircleIcon className="side-icons" />
+              <i id="icon" class="fa-solid fa-id-badge"></i>
               <span className="side-comm-span">Profile</span>
             </li>
           </Link>
 
           <Link to="/logout" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
-              <LogoutIcon className="side-icons" />
+              <i id="icon" class="fa-solid fa-arrow-right-from-bracket"></i>
               <span className="side-comm-span">Logout</span>
             </li>
           </Link>

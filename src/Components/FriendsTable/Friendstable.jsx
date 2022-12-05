@@ -1,14 +1,6 @@
 import Records from "./data.json";
 import "./friends.css";
 
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-
 const Friends = () => {
   return (
     <div>
@@ -16,25 +8,21 @@ const Friends = () => {
         Records.map((record) => {
           return (
             <div key={record.id}>
-              <TableContainer component={Paper} style={{ width: "1000px" }}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>ID</TableCell>
+              <table sx={{ minWidth: 650 }} aria-label="simple table">
+                <tr>
+                  <th>ID</th>
 
-                      <TableCell>Name</TableCell>
-                      <TableCell>Status</TableCell>
-                      <TableCell>.</TableCell>
-                    </TableRow>
-                  </TableHead>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>.</th>
+                </tr>
 
-                  {record.friends &&
-                    record.friends.map((data) => {
-                      return (
-                        <TableBody>
-                          <TableRow>
-                            <TableCell>{data.id}</TableCell>
-                            {/*<TableCell>
+                {record.friends &&
+                  record.friends.map((data) => {
+                    return (
+                      <tr>
+                        <td>{data.id}</td>
+                        {/*<TableCell>
                               <span className="user-logo">
                                 <img
                                   src={require("./Profile-icon.png")}
@@ -43,19 +31,17 @@ const Friends = () => {
                                 ></img>
                               </span>
                       </TableCell>*/}
-                            <TableCell>{data.friendProfileName}</TableCell>
-                            <TableCell>Friends</TableCell>
-                            <TableCell>
-                              <button value={data.id} className="pro-button">
-                                Unfriend
-                              </button>
-                            </TableCell>
-                          </TableRow>
-                        </TableBody>
-                      );
-                    })}
-                </Table>
-              </TableContainer>
+                        <td>{data.friendProfileName}</td>
+                        <td>Friends</td>
+                        <td>
+                          <button value={data.id} className="pro-button">
+                            Unfriend
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </table>
             </div>
           );
         })}

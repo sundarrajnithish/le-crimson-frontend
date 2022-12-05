@@ -9,7 +9,6 @@ const BlockedUserPage = () => {
       <ProfileCardSideBar />
 
       <div className="blockCommContainer">
-        <AdminNavigationbar />
         <hr />
         <div className="blocklist">
           <h2>Blocked Users</h2>

@@ -9,7 +9,6 @@ const FollowerPage = () => {
       <ProfileCardSideBar />
 
       <div className="followCommContainer">
-        <AdminNavigationbar />
         <hr />
         <div className="followlist">
           <h2>Followers</h2>

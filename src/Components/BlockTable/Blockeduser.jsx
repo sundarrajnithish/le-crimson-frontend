@@ -1,13 +1,5 @@
 import Records from "./data.json";
 import "./Blockeduser.css";
-//import React, { useState } from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 
 const BlockedUser = () => {
   return (
@@ -15,26 +7,22 @@ const BlockedUser = () => {
       {Records &&
         Records.map((record) => {
           return (
-            <div key={record.id}>
-              <TableContainer component={Paper} style={{ width: "1000px" }}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>ID</TableCell>
+            <div className="table-container" key={record.id}>
+              <table sx={{ minWidth: 650 }} aria-label="simple table">
+                <tr>
+                  <th>ID</th>
 
-                      <TableCell>Name</TableCell>
-                      <TableCell>Status</TableCell>
-                      <TableCell>.</TableCell>
-                    </TableRow>
-                  </TableHead>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>.</th>
+                </tr>
 
-                  {record.blocked &&
-                    record.blocked.map((data) => {
-                      return (
-                        <TableBody>
-                          <TableRow>
-                            <TableCell>{data.id}</TableCell>
-                            {/*<TableCell>
+                {record.blocked &&
+                  record.blocked.map((data) => {
+                    return (
+                      <tr>
+                        <td>{data.id}</td>
+                        {/*<TableCell>
                               <span className="user-logo">
                                 <img
                                   src={require("./Profile-icon.png")}
@@ -43,17 +31,15 @@ const BlockedUser = () => {
                                 ></img>
                               </span>
                       </TableCell>*/}
-                            <TableCell>{data.blockedProfileName}</TableCell>
-                            <TableCell>Blocked</TableCell>
-                            <TableCell>
-                              <button className="pro-button">UnBlock</button>
-                            </TableCell>
-                          </TableRow>
-                        </TableBody>
-                      );
-                    })}
-                </Table>
-              </TableContainer>
+                        <td>{data.blockedProfileName}</td>
+                        <td>Blocked</td>
+                        <td>
+                          <button className="pro-button">UnBlock</button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </table>
             </div>
           );
         })}

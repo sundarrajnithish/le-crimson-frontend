@@ -2,6 +2,16 @@
   width: 20px;
 }
 
+td {
+  text-align: center;
+}
+
+table {
+  border: 2px solid white;
+  width: 800px;
+  height: 200px;
+}
+
 .pro-button {
   background-color: #de1414;
   color: white;
