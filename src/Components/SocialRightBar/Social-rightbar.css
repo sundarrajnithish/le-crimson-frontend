@@ -1,0 +1,42 @@
+.social-rightbar {
+  flex: 3.5;
+}
+
+.social-rightbar-wrapper {
+  padding: 20px 20px 0 0;
+}
+
+.social-birthday-container {
+  display: flex;
+  align-items: center;
+}
+
+.birthday {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.birthday-text {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.social-rightbar-Ad {
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.social-rightbar-Title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.social-rightbar-FriendList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
