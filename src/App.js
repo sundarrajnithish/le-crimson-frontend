@@ -11,6 +11,7 @@ import PreferencePage from "./components/preferences/common/PreferencePage";
 import Searchpage from "./components/search/searchpage";
 
 import Chatpage from "./components/pages/chat_page/chatpage";
+import Social_page from "./components/pages/social_page/social_page";
 
 import "./components/chat/cometchat"
 
@@ -25,6 +26,8 @@ function App() {
         <Route path= "/preferences" element={<PreferencePage />} />
         <Route path= "/search" element={<Searchpage />} />
         <Route path= "/chat" element={<Chatpage />} />
+        <Route path= "/social" element={<Social_page />} />
+
     </Routes>
     </>
   )

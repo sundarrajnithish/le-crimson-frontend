@@ -5,7 +5,7 @@ import Header from "../../common/header/Header"
 
 import "../../chat/cometchat_login"
 
-
+import "./chatpage.css"
 
 const Chatpage = () => {
 

@@ -75,6 +75,9 @@ const Header = () => {
                 <Link to="/search">Search</Link>
               </li>
               <li>
+                <Link to="/social">Social</Link>
+              </li>
+              <li>
                 <Link to="/chat">Chat</Link>
               </li>
               <li>

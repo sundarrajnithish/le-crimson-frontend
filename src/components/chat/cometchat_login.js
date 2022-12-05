@@ -2,7 +2,7 @@ import { CometChat } from "@cometchat-pro/chat";
 import * as CONSTANTS from "../constants/constants";
 
 const authKey = CONSTANTS.AUTH_KEY;
-const uid = "user1"
+const uid = "user2"
 // const uid = localStorage.getItem("email")
 const name = localStorage.getItem("name")
 
