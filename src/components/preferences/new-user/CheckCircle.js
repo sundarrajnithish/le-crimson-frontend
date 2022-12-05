@@ -3,16 +3,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-// const axios = require('axios')
-
-// export async function createUser(data) {
-//   const response = await axios.post(
-//     `https://lecrimson-backend.herokuapp.com/profile`,
-//     { user: data }
-//   );
-//   return response.data;
-// }
-
 function CheckCircle() {
   let db_preferences = localStorage.getItem('login-db-preferences')
   const [checkedValues, setValue] = useState([]);
@@ -41,7 +31,7 @@ function CheckCircle() {
   return (
     <div className="wrapper">
       <p className="heading-C">Choose your Interest</p>
-      <h2>Your Stored Preferences: {db_preferences}</h2>
+      {/* <h2>Your Stored Preferences: {db_preferences}</h2> */}
       <h2>Your Current Preferences: {"["+checkedValues+"]"}</h2>
       <div className="sub_wrapper">
         <div className="topics">
@@ -171,6 +161,7 @@ function CheckCircle() {
         </div>
       </div>
       <button className="Fav-button" onClick={route}>
+        {localStorage.setItem('login-db-preferences', checkedValues)}
         Save
       </button>
     </div>

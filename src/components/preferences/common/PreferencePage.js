@@ -1,12 +1,12 @@
 import CheckCircle from "./CheckCircle";
-import Header from "../common/header/Header"
+import Header from "../../common/header/Header"
 import "./preference.css"
-import Footer from "../common/footer/footer"
+import Footer from "../../common/footer/footer"
 // import "./Preferences.css";
 function PreferencePage() {
   return (
     <>
-    <div className="container-h">
+    <div>
       <Header />
 
       <CheckCircle />

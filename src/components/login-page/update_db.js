@@ -6,6 +6,13 @@ import axios from 'axios'
 
 import CheckCircle from '../preferences/new-user/CheckCircle'
 
+import { useNavigate } from "react-router-dom";
+
+import Homepages from '../pages/home_page/Homepages';
+
+
+
+
 const Update_Db = () => {
     // Send data to DB
     const [items, setItems] = useState([]); 
@@ -41,6 +48,12 @@ const Update_Db = () => {
       getItems();
         }, [])
         
+        let navigate = useNavigate();
+        const route = () => {
+        let path = `/home`;
+        navigate(path);
+        };
+
 
         let db_preferences = localStorage.getItem('login-db-preferences')
         console.log(db_preferences, "Response ")
@@ -56,7 +69,11 @@ const Update_Db = () => {
             else {
             console.log(db_preferences)
               return (
-                <div>Preferences Fetched!</div>
+              <>
+              <Homepages />  
+             {/*Preferences Fetched! Redirecting to Home*/}
+              </>
+              
               )
             }
           })()}

@@ -1,11 +1,13 @@
 import "./CheckCircle.css";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function CheckCircle() {
+  let db_preferences = localStorage.getItem('login-db-preferences')
   const [checkedValues, setValue] = useState([]);
   useEffect(() => {
-    localStorage.setItem('preferences', JSON.stringify(checkedValues));
+    localStorage.setItem('live-preferences', JSON.stringify(checkedValues));
   }, [checkedValues]);
 
   function handleChange(event) {
@@ -27,141 +29,139 @@ function CheckCircle() {
   };
 
   return (
-    <div class="wrapper">
-      <br />
-      <br />
-      <br />
-      <br />
-      <p class="heading-C">Choose your Interest</p>
-      <div class="sub_wrapper">
-        <div class="topics">
-          <label class="container-I">
+    <div className="wrapper">
+      <p className="heading-C">Choose your Interest</p>
+      {/* <h2>Your Stored Preferences: {db_preferences}</h2> */}
+      <h2>Your Current Preferences: {"["+checkedValues+"]"}</h2>
+      <div className="sub_wrapper">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="World"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-globe"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-globe"></i>
           </label>
           <p>World</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Business"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-suitcase"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-suitcase"></i>
           </label>
           <p>Business</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Sports"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-baseball"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-baseball"></i>
           </label>
           <p>Sports</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Politics"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-landmark"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-landmark"></i>
           </label>
           <p>Politics</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Health"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-heart-pulse"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-heart-pulse"></i>
           </label>
           <p>Health</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Local"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-map"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-map"></i>
           </label>
           <p>Local</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Science"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-flask"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-flask"></i>
           </label>
           <p>Science</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Technology"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-microchip"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-microchip"></i>
           </label>
           <p>Technology</p>
         </div>
 
-        <div class="topics">
-          <label class="container-I">
+        <div className="topics">
+          <label className="container-I">
             <input
               type="checkbox"
-              class="input"
+              className="input"
               value="Entertainment"
               onChange={handleChange}
             />
-            <span class="d_checkbox"></span>
-            <i class="fas fa-tv"></i>
+            <span className="d_checkbox"></span>
+            <i className="fas fa-tv"></i>
           </label>
           <p>Entertainment</p>
         </div>
       </div>
       <button className="Fav-button" onClick={route}>
-        {/* {createUser(checkedValues)}; */}
+        {localStorage.setItem('login-db-preferences', checkedValues)}
         Save
       </button>
     </div>
