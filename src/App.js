@@ -17,6 +17,9 @@ import FriendPage from "./components/user-profile/FriendsTable/friendPage";
 import BlockedUserPage from "./components/user-profile/BlockTable/BlockedPage";
 import SuggessionPage from "./components/user-profile/Suggessions/SuggessionPage";
 
+import ContactPage from "./components/pages/contact/contactpage";
+import AboutUsPage from "./components/pages/about/AboutUsPage";
+
 import "./components/chat/cometchat";
 
 // import { CometChat } from "@cometchat-pro/chat";
@@ -63,6 +66,9 @@ function App() {
         <Route path="/friends" element={<FriendPage />} />
         <Route path="/blocked" element={<BlockedUserPage />} />
         <Route path="/suggession" element={<SuggessionPage />} />
+        <Route path="/contactus" element={<ContactPage />} />
+        <Route path="/aboutus" element={<AboutUsPage />} />
+
       </Routes>
     </>
   );

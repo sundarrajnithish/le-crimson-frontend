@@ -4,6 +4,8 @@ import SingleUser from "../../user-profile/SingleUser/admin-singleuser";
 
 import Header from "../../common/header/Header";
 
+import Footer from "../../common/footer/footer";
+
 import "./profilecommunication.css";
 
 const ProfileCommunication = () => {
@@ -21,6 +23,7 @@ const ProfileCommunication = () => {
         </div>
       </div>
     </div>
+<Footer />
     </>
   );
 };

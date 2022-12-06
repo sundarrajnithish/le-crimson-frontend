@@ -6,7 +6,7 @@ import axios from 'axios'
 // import Hero from "./Hero"
 
 import Header from "../../common/header/Header"
-// import Footer from "../common/footer/footer"
+import Footer from "../../common/footer/footer"
 // import Heading from "../common/heading/Heading"
 
 import Hero from "./grid_news/grid_news";
@@ -64,6 +64,7 @@ const Homepages = () => {
       <Hero />
       <Popular />
        </div>
+       <Footer />
     </>
   )
 }
