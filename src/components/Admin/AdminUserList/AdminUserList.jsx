@@ -13,48 +13,28 @@ const AdminUserList = () => {
 
         <tr>
           <td className="td">1</td>
-          <td
-            className="td1"
-            style={{ textAlign: "left", paddingLeft: "100px" }}
-          >
-            Ragapriya Saravanan
-          </td>
+          <td className="td1">RagaPriya Saravanan</td>
           <td style={{ color: "green" }} className="td">
             Admin
           </td>
         </tr>
         <tr>
           <td className="td">2</td>
-          <td
-            className="td1"
-            style={{ textAlign: "left", paddingLeft: "100px" }}
-          >
-            Kirankishore Gunasekaran
-          </td>
+          <td className="td1">Kirankishore</td>
           <td style={{ color: "green" }} className="td">
             Admin
           </td>
         </tr>
         <tr>
           <td className="td">3</td>
-          <td
-            className="td1"
-            style={{ textAlign: "left", paddingLeft: "100px" }}
-          >
-            Nitish Sundarraj Balaji
-          </td>
+          <td className="td1">Nitish</td>
           <td style={{ color: "green" }} className="td">
             Admin
           </td>
         </tr>
         <tr>
           <td className="td">4</td>
-          <td
-            className="td1"
-            style={{ textAlign: "left", paddingLeft: "100px" }}
-          >
-            Mohamed Nabeel Deen Faizudeen
-          </td>
+          <td className="td1">Nabeel</td>
           <td style={{ color: "green" }} className="td">
             Admin
           </td>
@@ -62,12 +42,7 @@ const AdminUserList = () => {
 
         <tr>
           <td className="td">5</td>
-          <td
-            className="td1"
-            style={{ textAlign: "left", paddingLeft: "100px" }}
-          >
-            Sindhiya Thirunavukkarasu Athithan
-          </td>
+          <td className="td1">Sindhiya Thirunavukkarasu Athithan</td>
           <td style={{ color: "green" }} className="td">
             Admin
           </td>

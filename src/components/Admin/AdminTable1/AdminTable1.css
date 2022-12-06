@@ -1,13 +1,11 @@
-.th2 {
+.th {
   font-size: 20px;
   background-color: rgba(244, 131, 111, 0.267);
-  padding: 20px;
 }
 
-.td2 {
-  text-align: left;
+.td {
+  text-align: center;
   font-size: large;
-  padding: 20px;
 }
 
 .table {

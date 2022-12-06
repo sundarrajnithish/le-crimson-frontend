@@ -2,8 +2,12 @@ import "./AdminUserListPage.css";
 import AdminSide from "../../../Admin/Adminsidebar/admin-sidebar";
 import AdminUserList from "../../../Admin/AdminUserList/AdminUserList";
 
+import Header from "../../../common/header/Header";
+
 const AdminUserListPage = () => {
   return (
+    <>
+    <Header />
     <div className="admin-list">
       <AdminSide />
 
@@ -12,6 +16,7 @@ const AdminUserListPage = () => {
         <hr />
       </div>
     </div>
+    </>
   );
 };
 

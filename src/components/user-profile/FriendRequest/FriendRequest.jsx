@@ -27,6 +27,7 @@ const FriendRequest = () => {
   };
 
   return (
+    
     <div key={items.id}>
       <table sx={{ minWidth: 650 }} aria-label="simple table">
         <tr>

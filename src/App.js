@@ -28,6 +28,7 @@ import CategoryList from "./components/pages/admin-page/AdminCategoryList/Catego
 import AdminUserListPage from "./components/pages/admin-page/AdminUserListPage/AdminUserListPage";
 import FriendRequestPage from "./components/user-profile/FriendRequest/FriendRequestPage";
 
+
 import "./components/chat/cometchat";
 
 // import { CometChat } from "@cometchat-pro/chat";
@@ -64,7 +65,7 @@ function App() {
         <Route path="/" element={<Loginpage />} />
         <Route path="/login_process" element={<Update_Db />} />
         <Route path="/home" element={<Homepages />} />
-        <Route path="/profile" element={<Profilepage />} />
+        {/* <Route path="/profile" element={<Profilepage />} /> */}
         <Route path="/preferences" element={<PreferencePage />} />
         <Route path="/search" element={<Searchpage />} />
         <Route path="/chat" element={<Chatpage />} />
@@ -82,8 +83,9 @@ function App() {
         <Route path="/adminuser" element={<AdminUserListPage />} />
         <Route path="/friendrequest" element={<FriendRequestPage />} />
 
-        {/* <Route path= "/profile" element={<Profilepage />} /> */}
-        {/* <Route path= "/chat" element={<Chatpage />} /> */}
+
+
+
       </Routes>
     </>
   );
