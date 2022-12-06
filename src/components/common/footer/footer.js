@@ -7,7 +7,7 @@ function Footer() {
   let navigate2 = useNavigate();
   let navigate3 = useNavigate();
   const routeChange1 = () => {
-    let path1 = `/aboutUs`;
+    let path1 = `/aboutus`;
     navigate1(path1);
   }
   const routeChange2 = () => {

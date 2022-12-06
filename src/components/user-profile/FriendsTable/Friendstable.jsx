@@ -1,64 +1,55 @@
 import Records from "./data.json";
 import "./friends.css";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 const Friends = () => {
-  const [items, setItems] = useState([]);
-  //user data from backend
-  useEffect(() => {
-    const getItems = async () => {
-      const response = await axios.get(
-        "https://lecrimson-backend.herokuapp.com/profile?userId=14"
-      );
-      console.log(response.data, "Data at followTable");
-      setItems(response.data);
-    };
-    getItems();
-  }, []);
-  //remove and update user details
-  const clickHandler = (event) => {
-    const newFriendsList = items.friends.filter(
-      (friend) => friend.id !== parseInt(event.target.id)
-    );
-
-    setItems((prev) => ({
-      ...prev,
-      friends: newFriendsList,
-    }));
-  };
-
   return (
-    <div key={items.id}>
-      <table sx={{ minWidth: 650 }} aria-label="simple table">
-        <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th>.</th>
-        </tr>
+    <>
+    <div>
+    <h2>Friends</h2>
+    <br />
+      {Records &&
+        Records.map((record) => {
+          return (
+            <div key={record.id}>
+              <table sx={{ minWidth: 650 }} aria-label="simple table">
+                <tr>
+                  <th>ID</th>
 
-        {items.friends &&
-          items.friends.map((data) => {
-            return (
-              <tr>
-                <td>{data.id}</td>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>.</th>
+                </tr>
 
-                <td>{data.friendProfileName}</td>
-                <td>{data.friendStatus}</td>
-                <td>
-                  <button
-                    id={data.id}
-                    onClick={clickHandler}
-                    className="pro-button"
-                  >
-                    Unfriend
-                  </button>
-                </td>
-              </tr>
-            );
-          })}
-      </table>
+                {record.friends &&
+                  record.friends.map((data) => {
+                    return (
+                      <tr>
+                        <td>{data.id}</td>
+                        {/*<TableCell>
+                              <span className="user-logo">
+                                <img
+                                  src={require("./Profile-icon.png")}
+                                  alt="i"
+                                  className="pro-img"
+                                ></img>
+                              </span>
+                      </TableCell>*/}
+                        <td>{data.friendProfileName}</td>
+                        <td>Friends</td>
+                        <td>
+                          <button value={data.id} className="pro-button">
+                            Unfriend
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </table>
+            </div>
+          );
+        })}
     </div>
+    </>
   );
 };
 

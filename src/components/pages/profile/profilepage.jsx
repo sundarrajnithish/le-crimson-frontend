@@ -4,6 +4,8 @@ import Header from "../../common/header/Header"
 
 import SingleUser from "../../profile/profile"
 
+import Footer from '../../common/footer/footer'
+
 const profilepage = () => {
   return (
     
@@ -12,6 +14,7 @@ const profilepage = () => {
           <div>
             <SingleUser />
           </div>
+          <Footer />
     </div>
     
   )

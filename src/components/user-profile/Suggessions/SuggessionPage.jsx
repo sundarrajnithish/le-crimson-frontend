@@ -3,8 +3,12 @@ import ProfileCardSideBar from "../Sidebar/profilecardSidebar";
 
 import Suggession from "./Suggession";
 
+import Header from "../../common/header/Header";
+
 const SuggessionPage = () => {
   return (
+    <>
+    <Header />
     <div className="followComm">
       <ProfileCardSideBar />
 
@@ -16,6 +20,7 @@ const SuggessionPage = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 export default SuggessionPage;

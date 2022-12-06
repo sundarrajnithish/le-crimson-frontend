@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ProfileCardSideBar = () => {
   return (
     <div className="Profile-comm-Sidebar">
-      <div className="comm-top">
+      {/* <div className="comm-top">
         <Link to="/home" style={{ textDecoration: "none" }}>
           <img
             className="comm-logo"
@@ -13,17 +13,17 @@ const ProfileCardSideBar = () => {
             alt="leCrimson"
           ></img>
         </Link>
-      </div>
+      </div> */}
       <hr />
       <div className="center">
         <ul>
-          <p className="side-title">Main</p>
+          {/* <p className="side-title">Main</p>
           <Link to="/home" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
               <i id="icon" class="fa-solid fa-house"></i>
               <span className="side-comm-span">Home</span>
             </li>
-          </Link>
+          </Link> */}
           <hr />
           <p className="side-title">User Settings</p>
           <Link to="/followers" style={{ textDecoration: "none" }}>
@@ -50,19 +50,7 @@ const ProfileCardSideBar = () => {
                 <span className="side-comm-span">Suggessions</span>
               </li>
             </Link>
-          </Link>
-          {/*  <Link to="/userbylocation" style={{ textDecoration: "none" }}>
-            <li className="comm-lists">
-              <i id="icon" class="fa-regular fa-address-book"></i>
-              <span className="side-comm-span">Discover Users by Location</span>
-            </li>
-          </Link>
-          <Link to="/userbycategory" style={{ textDecoration: "none" }}>
-            <li className="comm-lists">
-              <i id="icon" class="fa-regular fa-address-book"></i>
-              <span className="side-comm-span">Discover Users by Category</span>
-            </li>
-  </Link>*/}
+            </Link>
           <Link to="/blocked" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
               <i id="icon" class="fa-solid fa-user-lock"></i>
@@ -78,7 +66,7 @@ const ProfileCardSideBar = () => {
             </li>
           </Link>
 
-          <Link to="/logout" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li className="comm-lists">
               <i id="icon" class="fa-solid fa-arrow-right-from-bracket"></i>
               <span className="side-comm-span">Logout</span>

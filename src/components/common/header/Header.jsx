@@ -58,13 +58,7 @@ const Header = () => {
               <li>
                 <Link to="/home">Home</Link>
               </li>
-              <li>
-                <Link to="/communication">Communication</Link>
-              </li>
-              <li>
-                <Link to="/admin">Admin</Link>
-              </li>
-
+             
               {/* <li>
                 <Link to="/social">Social</Link>
               </li> */}
@@ -80,6 +74,10 @@ const Header = () => {
               <li>
                 <Link to="/chat">Chat</Link>
               </li>
+              <li>
+                <Link to="/admin">Admin</Link>
+              </li>
+              
               <li>
                 <Link to={vari1}>{items[0]}</Link>
               </li>

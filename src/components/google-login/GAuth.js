@@ -3,6 +3,9 @@ import React, { useEffect } from "react";
 import GoogleLogin from "react-google-login";
 import { gapi } from "gapi-script";
 import { useNavigate } from "react-router-dom";
+// import { CometChat } from "@cometchat-pro/chat";
+
+// import * as CONSTANTS from "../constants/constants";
 
 function GLogin(props) {
 
@@ -23,6 +26,19 @@ function GLogin(props) {
     props.response(response);
     let path = `/login_process`;
     navigate(path)
+
+
+    // const authKey = CONSTANTS.AUTH_KEY;
+    // const uid = "user1";
+
+    // CometChat.login(uid, authKey).then(
+    //   (user) => {
+    //     console.log("Login Successful:", { user });
+    //   },
+    //   (error) => {
+    //     console.log("Login failed with exception:", { error });
+    //   }
+    // );
   }
 
   const FailureresponseGoogle = (response) => {

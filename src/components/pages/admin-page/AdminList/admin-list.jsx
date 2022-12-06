@@ -3,8 +3,12 @@ import AdminSide from "../../../Admin/Adminsidebar/admin-sidebar";
 
 import AdminTable1 from "../../../Admin/AdminTable1/AdminTable1";
 
+import Header from "../../../common/header/Header";
+
 const AdminList = () => {
   return (
+    <>
+    <Header />
     <div className="admin-list">
       <AdminSide />
 
@@ -14,6 +18,7 @@ const AdminList = () => {
         <AdminTable1 />
       </div>
     </div>
+    </>
   );
 };
 
