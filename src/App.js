@@ -29,6 +29,16 @@ import CategoryList from "./components/pages/admin-page/AdminCategoryList/Catego
 import AdminUserListPage from "./components/pages/admin-page/AdminUserListPage/AdminUserListPage";
 import FriendRequestPage from "./components/user-profile/FriendRequest/FriendRequestPage";
 
+import World_page from "./components/pages/World/world_page";
+import Business_page from "./components/pages/Business/business_page";
+import Sports_page from "./components/pages/Sports/sports_page";
+
+import Politics_page from "./components/pages/Politics/politics_page";
+import Health_page from "./components/pages/Health/health_page";
+import Science_page from "./components/pages/Science/science_page";
+import Technology_page from "./components/pages/Technology/technology_page";
+import Entertainment_page from "./components/pages/Entertainment/entertainment_page";
+
 import "./components/chat/cometchat";
 
 // import { CometChat } from "@cometchat-pro/chat";
@@ -82,6 +92,15 @@ function App() {
         <Route path="/adminuser" element={<AdminUserListPage />} />
         <Route path="/friendrequest" element={<FriendRequestPage />} />
         <Route path="/logs" element={<AdminLogsPage />} />
+        <Route path="/World" element={<World_page />} />
+        <Route path="/Business" element={<Business_page />} />
+        <Route path="/Sports" element={<Sports_page />} />
+        <Route path="/Politics" element={<Politics_page />} />
+        <Route path="/Health" element={<Health_page />} />
+        <Route path="/Science" element={<Science_page />} />
+        <Route path="/Technology" element={<Technology_page />} />
+        <Route path="/Entertainment" element={<Entertainment_page />} />
+
       </Routes>
     </>
   );
