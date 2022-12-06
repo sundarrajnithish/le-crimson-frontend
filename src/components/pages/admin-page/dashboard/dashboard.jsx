@@ -11,23 +11,26 @@ import Header from "../../../common/header/Header";
 const Dashboard = () => {
   return (
     <>
-    <Header />
-    <div className="adminDash">
-      <AdminSide />
-      <div className="dash-container">
-        <div className="admin-widgets">
-          <AdminWidget type="User" />
-          <AdminWidget type="Categories" />
-          <AdminWidget type="Logs" />
-          <AdminWidget type="Admin Users" />
+      <Header />
+      <div className="adminDash">
+        <AdminSide />
+        <div className="dash-container">
+          <div className="admin-widgets">
+            <AdminWidget type="Categories" />
+
+            <AdminWidget type="Admin Users" />
+          </div>
+          <div className="admin-charts">
+            <AdminFeatures />
+            <AdminCharts2 />
+          </div>
+          <div className="admin-list-container">
+            <AdminWidget type="Logs" />
+            <hr />
+            <AdminWidget type="User" />
+          </div>
         </div>
-        <div className="admin-charts">
-          <AdminFeatures />
-          <AdminCharts2 />
-        </div>
-        <div className="admin-list-container"></div>
       </div>
-    </div>
     </>
   );
 };

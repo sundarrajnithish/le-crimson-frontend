@@ -1,11 +1,11 @@
-import "./Categorylist.css";
+import "./AdminLogsPage.css";
 import AdminSide from "../../../Admin/Adminsidebar/admin-sidebar";
 
-import CategoryTable from "../../../Admin/CategoryTable/CategoryTable";
+import AdminLogs from "../../../Admin/AdminLogs/AdminLogs";
 
 import Header from "../../../common/header/Header";
 
-const CategoryList = () => {
+const AdminLogsPage = () => {
   return (
     <>
       <Header />
@@ -13,7 +13,7 @@ const CategoryList = () => {
         <AdminSide />
 
         <div className="admin-list-container">
-          <CategoryTable />
+          <AdminLogs />
           <hr />
         </div>
       </div>
@@ -21,4 +21,4 @@ const CategoryList = () => {
   );
 };
 
-export default CategoryList;
+export default AdminLogsPage;

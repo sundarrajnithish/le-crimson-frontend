@@ -5,14 +5,6 @@ const AdminWidget = ({ type }) => {
   let data;
 
   switch (type) {
-    case "User":
-      data = {
-        title: "USERS",
-        link: "See all users",
-        R: "/users",
-        count: 11,
-      };
-      break;
     case "Categories":
       data = {
         title: "CATEGORIES",
@@ -21,12 +13,18 @@ const AdminWidget = ({ type }) => {
         count: "8",
       };
       break;
+    case "User":
+      data = {
+        title: "USERS",
+        link: "See all users",
+        R: "/users",
+      };
+      break;
     case "Logs":
       data = {
         title: "LOGS",
         link: "See all Logs",
         R: "/logs",
-        count: "5",
       };
       break;
     case "Admin Users":

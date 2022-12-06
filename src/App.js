@@ -23,11 +23,11 @@ import AboutUsPage from "./components/pages/about/AboutUsPage";
 
 import Dashboard from "./components/pages/admin-page/dashboard/dashboard";
 import AdminList from "./components/pages/admin-page/AdminList/admin-list";
+import AdminLogsPage from "./components/pages/admin-page/AdminLogs/AdminLogsPage";
 
 import CategoryList from "./components/pages/admin-page/AdminCategoryList/CategoryList";
 import AdminUserListPage from "./components/pages/admin-page/AdminUserListPage/AdminUserListPage";
 import FriendRequestPage from "./components/user-profile/FriendRequest/FriendRequestPage";
-
 
 import "./components/chat/cometchat";
 
@@ -81,10 +81,7 @@ function App() {
         <Route path="/categories" element={<CategoryList />} />
         <Route path="/adminuser" element={<AdminUserListPage />} />
         <Route path="/friendrequest" element={<FriendRequestPage />} />
-
-
-
-
+        <Route path="/logs" element={<AdminLogsPage />} />
       </Routes>
     </>
   );
