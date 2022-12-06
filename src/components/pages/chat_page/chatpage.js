@@ -12,7 +12,7 @@ const Chatpage = () => {
     return (
       <>
       <Header />
-      <div className='chat-ui'>
+      <div  style={{width: '800px', height:'800px' }}>
       <CometChatUI />
       </div>
       </>
