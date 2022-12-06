@@ -8,18 +8,18 @@ import Header from "../../common/header/Header";
 const SuggessionPage = () => {
   return (
     <>
-    <Header />
-    <div className="followComm">
-      <ProfileCardSideBar />
+      <Header />
+      <div className="followComm">
+        <ProfileCardSideBar />
 
-      <div className="followCommContainer">
-        <hr />
-        <div className="followlist">
-          <h2>Suggessions For You</h2>
-          <Suggession />
+        <div className="followCommContainer">
+          <hr />
+          <div className="followlist">
+            {/* <h2>Suggessions For You</h2> */}
+            <Suggession />
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

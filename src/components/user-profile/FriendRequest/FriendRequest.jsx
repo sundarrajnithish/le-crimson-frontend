@@ -7,7 +7,7 @@ const FriendRequest = () => {
   useEffect(() => {
     const getItems = async () => {
       const response = await axios.get(
-        "https://lecrimson-backend.herokuapp.com/profile?userId=4"
+        "https://lecrimson-backend.herokuapp.com/profile?userId=14"
       );
       console.log(response.data, "Data at followTable");
       setItems(response.data);

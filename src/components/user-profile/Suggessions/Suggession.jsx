@@ -41,7 +41,7 @@ const Suggession = () => {
 
   return (
     <div>
-      <table sx={{ minWidth: 650 }} aria-label="simple table">
+      <table sx={{ minWidth: 650 }} aria-label="simple table" className="table12">
         <tr>
           <th>Name</th>
           <th>Location</th>
@@ -53,9 +53,10 @@ const Suggession = () => {
           items.map((record) => {
             return (
               <tr>
-                <td>{record.firstName}</td>
-                <td>{record.location}</td>
-                <td>
+                <td className="td">{record.firstName}</td>
+                <td className="td">{record.location}</td>
+                
+                <td className="td">
                   <button
                     id={record.id}
                     onClick={clickHandler}

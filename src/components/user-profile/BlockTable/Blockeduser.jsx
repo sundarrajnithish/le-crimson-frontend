@@ -45,7 +45,7 @@ const BlockedUser = () => {
           items.blocked.map((data) => {
             return (
               <tr>
-                <td className="td1">{data.BlockedProfileName}</td>
+                <td className="td1">{data.blockedProfileName}</td>
                 <td className="td1">Blocked</td>
                 <td className="td1">
                   <button
