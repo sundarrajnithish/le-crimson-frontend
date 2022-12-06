@@ -41,7 +41,7 @@ const Contact = () => {
         <div className="contact__options">
           <article className="contact__option">
             <MdOutlineMailOutline className='contact__option-icon'/>
-            <h4>Email</h4>
+            <h4>Invite a Friend!</h4>
             <h5></h5>
             <form onSubmit={onSubmit}>
             <input className='input-box'

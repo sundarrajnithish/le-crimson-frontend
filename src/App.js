@@ -39,6 +39,8 @@ import Science_page from "./components/pages/Science/science_page";
 import Technology_page from "./components/pages/Technology/technology_page";
 import Entertainment_page from "./components/pages/Entertainment/entertainment_page";
 
+import Invite_page from "./components/pages/invite/invite_page";
+
 import "./components/chat/cometchat";
 
 // import { CometChat } from "@cometchat-pro/chat";
@@ -100,6 +102,7 @@ function App() {
         <Route path="/Science" element={<Science_page />} />
         <Route path="/Technology" element={<Technology_page />} />
         <Route path="/Entertainment" element={<Entertainment_page />} />
+        {/* <Route path="/invite" element={<Invite_page />} /> */}
 
       </Routes>
     </>

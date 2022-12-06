@@ -5,6 +5,7 @@ import Header from "../../common/header/Header"
 import SingleUser from "../../profile/profile"
 
 import Footer from '../../common/footer/footer'
+// import Invite from '../invite/invite'
 
 const profilepage = () => {
   return (
