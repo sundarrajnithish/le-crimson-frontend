@@ -62,8 +62,8 @@ console.log(user_data, "This is user data")
 function callYourAPI(data) {
 
 
-
-  const post_it = axios.post("url", data)
+  console.log(JSON.stringify(data))
+  axios.post("https://lecrimson-backend.herokuapp.com/news/feed?=", data)
 
 
 };
