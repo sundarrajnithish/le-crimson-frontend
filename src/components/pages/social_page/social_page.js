@@ -1,13 +1,13 @@
 import React from 'react'
 
 import Header from '../../common/header/Header'
-import SocialFeed from '../../social/SocialFeed/SocialFeed'
+import SocialPost from '../../social/Post/SocialPost'
 
 const Social_page = () => {
   return (
     <>
     <Header />
-    <SocialFeed />
+    <SocialPost />
     </>
   )
 }

@@ -1,11 +1,11 @@
-import "./Socialpost.css";
-
-import { Users } from "../dummyData";
+import React from 'react'
 import { useState, useEffect } from "react";
 import axios from 'axios'
+import "./Socialpost.css";
 
-const SocialPost = ({ post }) => {
-  const [like, setLike] = useState(post.like);
+const SocialPost = () => {
+
+  const [like, setLike] = useState();
   const [isLiked, setIsLiked] = useState(false);
 
   const likeHandler = () => {
@@ -13,49 +13,53 @@ const SocialPost = ({ post }) => {
     setIsLiked(!isLiked);
   };
 
-  const [items, setItems] = useState([])
+    const [user, setUser] = useState([])
   useEffect(() => {
-    const getItems = async () => {
+    const getUser = async () => {
       const response = await axios.get('https://lecrimson-backend.herokuapp.com/news/feed?userId=4')
-      console.log(response.data, "Data at Social Post")
-      localStorage.setItem("post-data", JSON.stringify(response.data))
-        setItems(response.data)
+      console.log(response.data, "Data at users.js")
+      // setItems({id: response.data["0"]["id"], profilePicture: response.data["0"]["profilePic"], username: response.data["0"]["name"]})
+      setUser(response.data)
+      // localStorage.setItem("post-data", JSON.stringify(user))
     }
-        getItems()
+        getUser();
 }, [])
-
-let post_data = JSON.parse(localStorage.getItem("post-data"))
-// console.log( post_data["0"]["profilePic"], "Fetched!")
-
+//  
+// let Users = items
+// console.log(items, "Items at social post")
+// console.log(items, "This is working data")
+let posts = [0, 1, 2]
   return (
     <>
-      <div className="social-post-container">
-        <div className="social-post-wrapper">
-          <div className="social-post-top">
-            <div className="social-post-top-left">
-              <img
-                className="social-post-profileImg"
-                src={
-                  post_data["0"]["profilePic"]
-                }
-                alt="person1"
-              />
-              <span className="social-post-name">
-                {post_data["0"]["name"]}
-              </span>
-              <span className="social-post-date">{post_data["0"]["publishDate"]}</span>
-            </div>
-            <div className="social-post-top-right"></div>
-          </div>
-          <div className="social-post-center">
-            <span className="social-post-text">{post_data["0"]["headlines"]}</span>
-            <img
-              className="social-post-postImg"
-              src={post_data["0"]["cover"]}
-              alt="postpic"
-            />
-          </div>
-          <div className="social-post-bottom">
+    <div>
+      {posts.map((data) => ( 
+    <div className="social-post-container">
+    <div className="social-post-wrapper">
+      <div className="social-post-top">
+        <div className="social-post-top-left">
+          
+          <img
+            className="social-post-profileImg"
+            src={user.length && user[data]?.profilePic}
+            alt="person1"
+          />
+          
+          <span className="social-post-name">
+            {user.length && user[data]?.name}
+          </span>
+          <span className="social-post-date">{user.length && user[data]?.publishDate}</span>
+        </div>
+        <div className="social-post-top-right"></div>
+      </div>
+      <div className="social-post-center">
+        <span className="social-post-text">{user.length && user[data]?.headlines}</span>
+        <img
+          className="social-post-postImg"
+          src={user.length && user[data]?.cover}
+          alt="postpic"
+        />
+      </div>
+      <div className="social-post-bottom">
             <div className="social-post-bottom-left">
               <img
                 className="social-post-like"
@@ -74,12 +78,15 @@ let post_data = JSON.parse(localStorage.getItem("post-data"))
               </span>
             </div>
             <div className="social-post-bottom-right">
-              <span className="postCommentText">{post.comment} comments</span>
+              <span className="postCommentText"> comments</span>
             </div>
-          </div>
-        </div>
+      </div>
+      </div>
+      </div>
+      ))}
       </div>
     </>
-  );
-};
-export default SocialPost;
+  )
+}
+
+export default SocialPost
