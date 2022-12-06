@@ -58,7 +58,16 @@ console.log(news_data[0], "This is original news data")
 
 let user_data = JSON.parse(localStorage.getItem("profile-data"))
 console.log(user_data, "This is user data")
-  
+
+function callYourAPI(data) {
+
+
+
+  const post_it = axios.post("url", data)
+
+
+};
+
   // Post_data()
 
   return (
@@ -88,7 +97,7 @@ console.log(user_data, "This is user data")
                         <label> {val.publishDate}</label>
                       </div>
                       <div className='comment'>
-                        <button onClick={() => {console.log({headlines: val.headlines,
+                        <button onClick={() => {callYourAPI({headlines: val.headlines,
             sourceUrl: val.sourceUrl,
             sourceName: val.sourceName,
             articleUrl: val.articleUrl,
