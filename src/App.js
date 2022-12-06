@@ -65,7 +65,6 @@ function App() {
         <Route path="/" element={<Loginpage />} />
         <Route path="/login_process" element={<Update_Db />} />
         <Route path="/home" element={<Homepages />} />
-        {/* <Route path="/profile" element={<Profilepage />} /> */}
         <Route path="/preferences" element={<PreferencePage />} />
         <Route path="/search" element={<Searchpage />} />
         <Route path="/chat" element={<Chatpage />} />

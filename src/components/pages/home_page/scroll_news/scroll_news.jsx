@@ -55,7 +55,7 @@ console.log(news_data[0], "This is original news data")
         <div className='content'>
           <Slider {...settings}>
             {
-            items.slice(0,8).map((val) => {
+            items.map((val) => {
               return (
                 <div className='items'>
                   <div className='box shadow'>
@@ -74,10 +74,10 @@ console.log(news_data[0], "This is original news data")
                         <label> {val.publishDate}</label>
                       </div>
                       <div className='comment'>
-                        <button onClick={console.log({id: val.id, articleUrl: val.articleUrl}, "News Data for Post")}>
+                        <button onClick={() => {console.log({id: val.id, articleUrl: val.articleUrl}, "News Data for Post")}}>
                         <i className='fas fa-share'></i>
                         </button>
-                        <label>{" 1"}</label>
+                        <label>{" "}</label>
                       </div>
                     </div>
                   </div>
