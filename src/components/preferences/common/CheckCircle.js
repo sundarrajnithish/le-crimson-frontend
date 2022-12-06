@@ -32,7 +32,7 @@ function CheckCircle() {
     <div className="wrapper">
       <p className="heading-C">Choose your Interest</p>
       {/* <h2>Your Stored Preferences: {db_preferences}</h2> */}
-      <h2>Your Current Preferences: {"["+checkedValues+"]"}</h2>
+      {/* <h2>Your Current Preferences: {"["+checkedValues+"]"}</h2> */}
       <div className="sub_wrapper">
         <div className="topics">
           <label className="container-I">

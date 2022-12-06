@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import axios from 'axios'
 import "./Socialpost.css";
 
+import Heading from '../../common/heading/Heading';
+
 const SocialPost = () => {
 
   const [like, setLike] = useState();
@@ -31,6 +33,7 @@ const SocialPost = () => {
 let posts = [0, 1, 2]
   return (
     <>
+    <Heading title="News Posts"/>
     <div>
       {posts.map((data) => ( 
     <div className="social-post-container">
