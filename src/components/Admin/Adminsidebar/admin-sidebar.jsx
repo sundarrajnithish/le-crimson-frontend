@@ -6,20 +6,20 @@ const AdminSide = () => {
   return (
     <div className="admin-Sidebar">
       <div className="top">
-        {/* <Link to="/home" style={{ textDecoration: "none" }}>
+        <Link to="/home" style={{ textDecoration: "none" }}>
           <span className="a-logo">leCrimson</span>
-        </Link> */}
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul className="ul">
           <p className="side-title">MAIN</p>
-          {/* <Link to="/home" style={{ textDecoration: "none" }}>
+          <Link to="/home" style={{ textDecoration: "none" }}>
             <li className="li">
               <i class="fa-solid fa-house" id="side-icons"></i>
               <span className="side-span">Home</span>
             </li>
-          </Link> */}
+          </Link>
           <Link to="/admin" style={{ textDecoration: "none" }}>
             <li className="li">
               <i class="fa-brands fa-flipboard" id="side-icons"></i>
