@@ -44,6 +44,8 @@ const Popular = () => {
         getItems()
 }, [])
 
+let news_data = items
+console.log(news_data[0], "This is original news data")
 // console.log(popular, "this is popular")
   return (
     <>
@@ -72,7 +74,9 @@ const Popular = () => {
                         <label> {val.publishDate}</label>
                       </div>
                       <div className='comment'>
-                        <i className='fas fa-comments'></i>
+                        <button onClick={console.log({id: val.id, articleUrl: val.articleUrl}, "News Data for Post")}>
+                        <i className='fas fa-share'></i>
+                        </button>
                         <label>{" 1"}</label>
                       </div>
                     </div>
