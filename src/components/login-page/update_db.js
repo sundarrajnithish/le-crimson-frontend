@@ -46,6 +46,7 @@ const Update_Db = () => {
             send_data["data"]["favCategory"]
           );
           localStorage.setItem("user-id", send_data["data"]["id"]);
+          localStorage.setItem("profile-data", JSON.stringify(send_data["data"]))
         })
         .catch(function (error) {
           console.log(error);
