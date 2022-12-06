@@ -3,75 +3,59 @@ import "./followers.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Heading from "../../common/heading/Heading";
-
 const Followers = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
     const getItems = async () => {
       const response = await axios.get(
-        "https://lecrimson-backend.herokuapp.com/admin/profile/all"
+        "https://lecrimson-backend.herokuapp.com/profile?userId=14"
       );
       console.log(response.data, "Data at followTable");
-      localStorage.setItem("profile-data", JSON.stringify(response.data));
       setItems(response.data);
-      // console.log(items, "Before Shuffling")
-      // items = arrayShuffle(items)
-      // console.log(shuffleItem, "Shuffled")
     };
     getItems();
   }, []);
-  let test = JSON.parse(localStorage.getItem("profile-data"));
-  console.log(test, "this is test");
-  console.log(Records, "this is records");
+
+  const clickHandler = (event) => {
+    const newFollowerList = items.followers.filter(
+      (follower) => follower.id !== parseInt(event.target.id)
+    );
+
+    setItems((prev) => ({
+      ...prev,
+      followers: newFollowerList,
+    }));
+  };
 
   return (
-    <>
-    <div>
-    <h2>Followers </h2>
-    <br />
-      {Records &&
-        Records.map((record) => {
-          return (
-            
-            <div key={record.id}>
-              <table sx={{ minWidth: 650 }} aria-label="simple table">
-                <tr>
-                  <th>ID</th>
+    <div key={items.id}>
+      <table sx={{ minWidth: 650 }} aria-label="simple table">
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>.</th>
+        </tr>
 
-                  <th>Name</th>
-                  <th>Status</th>
-                  {/* <th>.</th> */}
-                </tr>
-
-                {record.followers &&
-                  record.followers.map((data) => {
-                    return (
-                      <tr>
-                        <td>{data.id}</td>
-                        {/*<TableCell>
-                              <span className="user-logo">
-                                <img
-                                  src={require("./Profile-icon.png")}
-                                  alt="i"
-                                  className="pro-img"
-                                ></img>
-                              </span>
-                      </TableCell>*/}
-                        <td>{data.followerProfileName}</td>
-                        <td>Following</td>
-                        <td>
-                          <button className="pro-button">Unfollow</button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-              </table>
-            </div>
-          );
-        })}
+        {items.followers &&
+          items.followers.map((data) => {
+            return (
+              <tr>
+                <td>{data.followerProfileName}</td>
+                <td>Following</td>
+                <td>
+                  <button
+                    id={data.id}
+                    onClick={clickHandler}
+                    className="pro-button"
+                  >
+                    Unfollow
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
+      </table>
     </div>
-    </>
   );
 };
 

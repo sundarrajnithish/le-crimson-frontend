@@ -53,7 +53,7 @@ const SingleUser = () => {
           {/* <AdminTable /> */}
         </div>
       </div>
-      
+      //{" "}
     </div>
   );
 };

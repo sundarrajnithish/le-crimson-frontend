@@ -6,12 +6,8 @@ import AdminCharts2 from "../../../Admin/AdminCharts/adminchartbar";
 
 import AdminFeatures from "../../../Admin/AdminFeatures/adminfeatures";
 
-import Header from "../../../common/header/Header";
-
 const Dashboard = () => {
   return (
-    <>
-    <Header />
     <div className="adminDash">
       <AdminSide />
       <div className="dash-container">
@@ -28,7 +24,6 @@ const Dashboard = () => {
         <div className="admin-list-container"></div>
       </div>
     </div>
-    </>
   );
 };
 

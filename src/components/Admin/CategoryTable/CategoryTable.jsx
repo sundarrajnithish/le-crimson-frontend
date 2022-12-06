@@ -13,7 +13,10 @@ const CategoryTable = () => {
 
         <tr>
           <td className="td">1</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#8884d8" }} class="fa-solid fa-globe"></i> World
           </td>
           <td style={{ color: "green" }} className="td">
@@ -22,7 +25,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">2</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#8dd1e1" }} class="fa-solid fa-volleyball"></i>{" "}
             Sports
           </td>
@@ -32,7 +38,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">3</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#83a6ed" }} class="fa-solid fa-briefcase"></i>{" "}
             Business
           </td>
@@ -42,7 +51,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">4</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#82ca9d" }} class="fa-solid fa-heart-pulse"></i>{" "}
             Health
           </td>
@@ -52,7 +64,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">5</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i
               style={{ color: "#82ca9d" }}
               class="fa-solid fa-landmark-dome"
@@ -65,7 +80,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">6</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#a4de6c" }} class="fa-solid fa-flask-vial"></i>{" "}
             Science
           </td>
@@ -75,7 +93,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">7</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#d0ed57" }} class="fa-solid fa-microchip"></i>{" "}
             Technology
           </td>
@@ -85,7 +106,10 @@ const CategoryTable = () => {
         </tr>
         <tr>
           <td className="td">8</td>
-          <td className="td1">
+          <td
+            className="td1"
+            style={{ textAlign: "left", paddingLeft: "100px" }}
+          >
             <i style={{ color: "#ffc658" }} class="fa-solid fa-film"></i>{" "}
             Entertainment
           </td>
