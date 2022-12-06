@@ -15,3 +15,12 @@
   top: 0px;
   left: 200px;
 }
+.td {
+  text-align: center;
+}
+
+.table12 {
+  border: 2px solid white;
+  width: 800px;
+  height: 200px;
+}

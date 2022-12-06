@@ -8,18 +8,18 @@ import Header from "../../common/header/Header";
 const FriendPage = () => {
   return (
     <>
-    <Header />
-    <div className="friendComm">
-      <ProfileCardSideBar />
+      <Header />
+      <div className="friendComm">
+        <ProfileCardSideBar />
 
-      <div className="friendCommContainer">
-        <hr />
-        <div className="friendlist">
-          
-          <Friends />
+        <div className="friendCommContainer">
+          <hr />
+          <div className="friendlist">
+            {/* <h2>Friends</h2> */}
+            <Friends />
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

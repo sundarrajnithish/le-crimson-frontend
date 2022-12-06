@@ -8,18 +8,18 @@ import Header from "../../common/header/Header";
 const FollowerPage = () => {
   return (
     <>
-    <Header />
-    <div className="followComm">
-      <ProfileCardSideBar />
+      <Header />
+      <div className="followComm">
+        <ProfileCardSideBar />
 
-      <div className="followCommContainer">
-        <hr />
-        <div className="followlist">
-          {/* <h2>Followers</h2> */}
-          <Followers />
+        <div className="followCommContainer">
+          <hr />
+          <div className="followlist">
+            {/* <h2>Followers</h2> */}
+            <Followers />
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 };

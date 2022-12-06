@@ -10,7 +10,7 @@ const Suggession = () => {
   useEffect(() => {
     const getItems = async () => {
       const response = await axios.get(
-        "https://lecrimson-backend.herokuapp.com/admin/profile/all"
+        "https://lecrimson-backend.herokuapp.com/profile/search/location?location=US"
       );
       console.log(response.data, "Data at followTable");
       setItems(response.data);
@@ -20,7 +20,7 @@ const Suggession = () => {
 
   const clickHandler = (event) => {
     {
-      event.target.id === items.id
+      parseInt(event.target.id) === items.id
         ? setButtonText("unFollow")
         : setButtonText("Follow");
     }
@@ -64,13 +64,13 @@ const Suggession = () => {
                     follow
                   </button>
 
-                  <button
+                  {/* <button
                     id={record.id}
                     onClick={clickHandler}
                     className="pro-button"
                   >
                     add friend
-                  </button>
+                  </button> */}
                 </td>
               </tr>
             );

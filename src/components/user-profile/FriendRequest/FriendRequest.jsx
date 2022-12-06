@@ -27,9 +27,12 @@ const FriendRequest = () => {
   };
 
   return (
-    
     <div key={items.id}>
-      <table sx={{ minWidth: 650 }} aria-label="simple table">
+      <table
+        sx={{ minWidth: 650 }}
+        aria-label="simple table"
+        className="table12"
+      >
         <tr>
           <th>Name</th>
           <th>Status</th>
@@ -42,9 +45,9 @@ const FriendRequest = () => {
             .map((data) => {
               return (
                 <tr>
-                  <td>{data.friendProfileName}</td>
-                  <td>{data.friendStatus}</td>
-                  <td>
+                  <td className="td">{data.friendProfileName}</td>
+                  <td className="td">{data.friendStatus}</td>
+                  <td className="td">
                     <button
                       id={data.id}
                       onClick={clickHandler}

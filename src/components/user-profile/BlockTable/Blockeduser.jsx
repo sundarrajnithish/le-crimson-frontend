@@ -30,7 +30,11 @@ const BlockedUser = () => {
 
   return (
     <div key={items.id}>
-      <table sx={{ minWidth: 650 }} aria-label="simple table">
+      <table
+        sx={{ minWidth: 650 }}
+        aria-label="simple table"
+        className="table12"
+      >
         <tr>
           <th>Name</th>
           <th>Status</th>
@@ -41,9 +45,9 @@ const BlockedUser = () => {
           items.blocked.map((data) => {
             return (
               <tr>
-                <td>{data.BlockedProfileName}</td>
-                <td>Blocked</td>
-                <td>
+                <td className="td1">{data.BlockedProfileName}</td>
+                <td className="td1">Blocked</td>
+                <td className="td1">
                   <button
                     id={data.id}
                     onClick={clickHandler}
