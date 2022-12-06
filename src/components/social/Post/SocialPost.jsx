@@ -30,7 +30,8 @@ const SocialPost = () => {
 // let Users = items
 // console.log(items, "Items at social post")
 // console.log(items, "This is working data")
-let posts = [0, 1, 2]
+let posts = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
   return (
     <>
     <Heading title="News Posts"/>

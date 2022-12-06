@@ -20,7 +20,7 @@ const CategoryTable = () => {
             <i style={{ color: "#8884d8" }} class="fa-solid fa-globe"></i> World
           </td>
           <td style={{ color: "green" }} className="td">
-            5
+            1
           </td>
         </tr>
         <tr>
@@ -33,7 +33,7 @@ const CategoryTable = () => {
             Sports
           </td>
           <td style={{ color: "green" }} className="td">
-            12
+            4
           </td>
         </tr>
         <tr>
@@ -46,7 +46,7 @@ const CategoryTable = () => {
             Business
           </td>
           <td style={{ color: "green" }} className="td">
-            7
+            4
           </td>
         </tr>
         <tr>
@@ -59,7 +59,7 @@ const CategoryTable = () => {
             Health
           </td>
           <td style={{ color: "green" }} className="td">
-            9
+            0
           </td>
         </tr>
         <tr>
@@ -75,7 +75,7 @@ const CategoryTable = () => {
             Politics
           </td>
           <td style={{ color: "green" }} className="td">
-            8
+            0
           </td>
         </tr>
         <tr>
@@ -88,7 +88,7 @@ const CategoryTable = () => {
             Science
           </td>
           <td style={{ color: "green" }} className="td">
-            3
+            2
           </td>
         </tr>
         <tr>
@@ -101,7 +101,7 @@ const CategoryTable = () => {
             Technology
           </td>
           <td style={{ color: "green" }} className="td">
-            8
+            1
           </td>
         </tr>
         <tr>
@@ -114,7 +114,7 @@ const CategoryTable = () => {
             Entertainment
           </td>
           <td style={{ color: "green" }} className="td">
-            11
+            4
           </td>
         </tr>
       </table>

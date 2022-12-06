@@ -2,11 +2,11 @@
   width: 20px;
 }
 
-td {
+.td {
   text-align: center;
 }
 
-table {
+.table12 {
   border: 2px solid white;
   width: 800px;
   height: 200px;

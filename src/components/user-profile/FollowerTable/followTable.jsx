@@ -29,7 +29,11 @@ const Followers = () => {
 
   return (
     <div key={items.id}>
-      <table sx={{ minWidth: 650 }} aria-label="simple table">
+      <table
+        sx={{ minWidth: 650 }}
+        aria-label="simple table"
+        className="table12"
+      >
         <tr>
           <th>Name</th>
           <th>Status</th>
@@ -40,9 +44,9 @@ const Followers = () => {
           items.followers.map((data) => {
             return (
               <tr>
-                <td>{data.followerProfileName}</td>
-                <td>Following</td>
-                <td>
+                <td className="td">{data.followerProfileName}</td>
+                <td className="td">Following</td>
+                <td className="td">
                   <button
                     id={data.id}
                     onClick={clickHandler}
