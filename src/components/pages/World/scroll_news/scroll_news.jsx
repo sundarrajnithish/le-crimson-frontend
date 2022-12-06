@@ -58,6 +58,15 @@ console.log(news_data[0], "This is original news data")
 
 let user_data = JSON.parse(localStorage.getItem("profile-data"))
 console.log(user_data, "This is user data")
+
+function callYourAPI(data) {
+
+
+  console.log(JSON.stringify(data))
+  axios.post("https://lecrimson-backend.herokuapp.com/news/feed?=", data)
+
+
+};
   
   // Post_data()
 
@@ -88,7 +97,7 @@ console.log(user_data, "This is user data")
                         <label> {val.publishDate}</label>
                       </div>
                       <div className='comment'>
-                        <button onClick={() => {console.log({headlines: val.headlines,
+                        <button onClick={() => {callYourAPI({headlines: val.headlines,
             sourceUrl: val.sourceUrl,
             sourceName: val.sourceName,
             articleUrl: val.articleUrl,
@@ -96,7 +105,7 @@ console.log(user_data, "This is user data")
             cover: val.cover ,
             userId:user_data["id"],
             name: user_data["firstName"],
-            profilePic: user_data["profilePic"]}, "News Data for Post")}}>
+            profilePic: user_data["profilePic"]})}}>
                         <i className='fas fa-share'></i>
                         </button>
                         <label>{" "}</label>

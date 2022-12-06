@@ -29,15 +29,9 @@ const AboutUs = () => {
             </h1>
             <h5>company overview</h5>
             <p className="pp">
-              Today, we're seeing the gradual evolution of Enterprise strategy,
-              business models and frontier technology adopting new operating
-              models that serve the Knowledge Economy led by Artificial
-              Intelligence and Data Sciences. The leadership at HUBINO
-              recognizes this need for the Enterprise market place and has built
-              a global technology eco-system practice led HUB where there is a
-              natural immersion and integration of the intelligence, technology,
-              and human expertise which will help leaders be poised to thrive at
-              the intersection of regulation and commerce
+            Crimson News is a Montreal-based news service provider. We are unbiased and independent, and each day we produce content that educates and entertains millions of people across the world. Montreal is historically known as the gathering place for many First Nations. Today, it is home to a diverse population of Indigenous and other peoples. We respect the continued connections – past, present and future – in our ongoing relationships with Indigenous and other peoples within the Montreal Community
+Who we are
+Software is developed by five students of Concordia University to provide news to the public hazel free. The site is developed purely for academic purposes
             </p>
             <button className="buttonabout" type="button" onClick={route1}>
               Let's connect

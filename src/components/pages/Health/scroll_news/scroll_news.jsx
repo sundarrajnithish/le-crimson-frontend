@@ -61,6 +61,15 @@ console.log(user_data, "This is user data")
   
   // Post_data()
 
+  function callYourAPI(data) {
+
+
+    console.log(JSON.stringify(data))
+    axios.post("https://lecrimson-backend.herokuapp.com/news/feed?=", data)
+  
+  
+  };
+
   return (
     <>
     
@@ -88,7 +97,7 @@ console.log(user_data, "This is user data")
                         <label> {val.publishDate}</label>
                       </div>
                       <div className='comment'>
-                        <button onClick={() => {console.log({headlines: val.headlines,
+                        <button onClick={() => {callYourAPI({headlines: val.headlines,
             sourceUrl: val.sourceUrl,
             sourceName: val.sourceName,
             articleUrl: val.articleUrl,
