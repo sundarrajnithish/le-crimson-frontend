@@ -104,7 +104,7 @@ function CheckCircle() {
           <p>Health</p>
         </div>
 
-        <div className="topics">
+        {/* <div className="topics">
           <label className="container-I">
             <input
               type="checkbox"
@@ -116,7 +116,7 @@ function CheckCircle() {
             <i className="fas fa-map"></i>
           </label>
           <p>Local</p>
-        </div>
+        </div> */}
 
         <div className="topics">
           <label className="container-I">
