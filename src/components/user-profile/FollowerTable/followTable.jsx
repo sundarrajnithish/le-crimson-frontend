@@ -3,6 +3,8 @@ import "./followers.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import Heading from "../../common/heading/Heading";
+
 const Followers = () => {
   const [items, setItems] = useState([]);
   useEffect(() => {
@@ -24,10 +26,14 @@ const Followers = () => {
   console.log(Records, "this is records");
 
   return (
+    <>
     <div>
+    <h2>Followers </h2>
+    <br />
       {Records &&
         Records.map((record) => {
           return (
+            
             <div key={record.id}>
               <table sx={{ minWidth: 650 }} aria-label="simple table">
                 <tr>
@@ -35,7 +41,7 @@ const Followers = () => {
 
                   <th>Name</th>
                   <th>Status</th>
-                  <th>.</th>
+                  {/* <th>.</th> */}
                 </tr>
 
                 {record.followers &&
@@ -65,6 +71,7 @@ const Followers = () => {
           );
         })}
     </div>
+    </>
   );
 };
 

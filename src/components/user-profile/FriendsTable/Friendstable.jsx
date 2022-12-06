@@ -3,7 +3,10 @@ import "./friends.css";
 
 const Friends = () => {
   return (
+    <>
     <div>
+    <h2>Friends</h2>
+    <br />
       {Records &&
         Records.map((record) => {
           return (
@@ -46,6 +49,7 @@ const Friends = () => {
           );
         })}
     </div>
+    </>
   );
 };
 

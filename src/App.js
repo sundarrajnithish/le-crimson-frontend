@@ -6,7 +6,7 @@ import "./App.css";
 import Loginpage from "./components/login-page/Loginpage";
 import Update_Db from "./components/login-page/update_db";
 import Homepages from "./components/pages/home_page/Homepages";
-import Profilepage from "./components/pages/profile/profilepage";
+// import Profilepage from "./components/pages/profile/profilepage";
 import PreferencePage from "./components/preferences/common/PreferencePage";
 import Searchpage from "./components/search/searchpage";
 import ProfileCommunication from "./components/pages/ProfileCommunication/profileCommunication";
@@ -53,12 +53,12 @@ function App() {
         <Route path="/" element={<Loginpage />} />
         <Route path="/login_process" element={<Update_Db />} />
         <Route path="/home" element={<Homepages />} />
-        <Route path="/profile" element={<Profilepage />} />
+        {/* <Route path="/profile" element={<Profilepage />} /> */}
         <Route path="/preferences" element={<PreferencePage />} />
         <Route path="/search" element={<Searchpage />} />
         <Route path="/chat" element={<Chatpage />} />
         <Route path="/social" element={<Social_page />} />
-        <Route path="/communication" element={<ProfileCommunication />} />
+        <Route path="/profile" element={<ProfileCommunication />} />
         <Route path="/followers" element={<FollowerPage />} />
         <Route path="/friends" element={<FriendPage />} />
         <Route path="/blocked" element={<BlockedUserPage />} />

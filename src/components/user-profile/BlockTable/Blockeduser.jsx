@@ -3,7 +3,10 @@ import "./Blockeduser.css";
 
 const BlockedUser = () => {
   return (
+    <>
     <div>
+      <h2>Blocked Users</h2>
+      <br />
       {Records &&
         Records.map((record) => {
           return (
@@ -44,6 +47,7 @@ const BlockedUser = () => {
           );
         })}
     </div>
+    </>
   );
 };
 
