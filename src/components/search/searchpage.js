@@ -31,7 +31,7 @@ const Searchpage = () => {
     
   return (
     <>
-    <div className='container-h'>
+    <div>
     <Header />
     <br />
     <Search />

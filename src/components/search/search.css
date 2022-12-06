@@ -4,7 +4,7 @@
   }
 
 .search-bar{
-    margin-left: 700px;
+    margin-left: 250px;
     margin-bottom: 30px;
     padding-right: 0px;
     width: 1000px;
@@ -24,7 +24,7 @@
     padding: 13px 30px;
     border-radius: 30px;
     transition: 0.4s;
-    margin-left: 720px;
+    margin-left: 0px;
   }
 
   .searchbutton:hover {
