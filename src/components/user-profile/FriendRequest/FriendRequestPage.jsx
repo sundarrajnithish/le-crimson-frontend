@@ -3,11 +3,14 @@ import ProfileCardSideBar from "../Sidebar/profilecardSidebar";
 import AdminNavigationbar from "../Navigation/admin-navbar";
 import FriendRequest from "./FriendRequest";
 
+// import Request_data from "./request_data";
+
 import Header from "../../common/header/Header";
 
 const FriendRequestPage = () => {
   return (
     <>
+    {/* <Request_data /> */}
     <Header />
     
     <div className="followComm">
