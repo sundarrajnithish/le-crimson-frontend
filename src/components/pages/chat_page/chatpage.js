@@ -3,8 +3,6 @@ import { CometChatUI } from "../../../cometchat-pro-react-ui-kit/CometChatWorksp
 
 import Header from "../../common/header/Header"
 
-import Footer from '../../common/footer/footer';
-
 import "../../chat/cometchat_login"
 
 import "./chatpage.css"
@@ -17,7 +15,6 @@ const Chatpage = () => {
       <div  style={{width: '800px', height:'800px' }}>
       <CometChatUI />
       </div>
-      <Footer />
       </>
     )
   }

@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "firstName": "sam",
+    "lastName": "hike",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": null,
+    "followers": null,
+    "blocked": null,
+    "status": "Online"
+  },
+  {
+    "id": 2,
+    "firstName": "cam",
+    "lastName": "nemo",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": "fi",
+    "followers": "fo",
+    "blocked": null,
+    "status": "Online"
+  },
+  {
+    "id": 3,
+    "firstName": "cam",
+    "lastName": "nemo",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": null,
+    "followers": null,
+    "blocked": null,
+    "status": "Online"
+  },
+  {
+    "id": 4,
+    "firstName": "cam",
+    "lastName": "nemo",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": null,
+    "followers": null,
+    "blocked": null,
+    "status": "Online"
+  },
+  {
+    "id": 5,
+    "firstName": "sam",
+    "lastName": "nemo",
+    "email": "email@hjsl",
+    "phoneNo": "23412313",
+    "location": "IND",
+    "favCategory": "[\"Technology\",\"Sports\",\"Business\",\"Health\",\"World\"]",
+    "friends": null,
+    "followers": null,
+    "blocked": null,
+    "status": "Online"
+  }
+]

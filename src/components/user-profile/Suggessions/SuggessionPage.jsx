@@ -1,6 +1,6 @@
 import "./SuggessionPage.css";
 import ProfileCardSideBar from "../Sidebar/profilecardSidebar";
-import AdminNavigationbar from "../Navigation/admin-navbar";
+
 import Suggession from "./Suggession";
 
 const SuggessionPage = () => {

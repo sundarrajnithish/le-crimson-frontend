@@ -6,7 +6,6 @@ import Newslist from './news-list'
 import arrayShuffle from "array-shuffle"
 import axios from 'axios'
 import Heading from "../common/heading/Heading"
-import Footer from "../common/footer/footer"
 // import Dropdown from "./dropdown"
 
 import "./search.css"
@@ -42,7 +41,6 @@ const Searchpage = () => {
     <Newslist />
     {/* <News /> */}
     </div>
-    <Footer />
     </>
   )
 }

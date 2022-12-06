@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GLogin from "../google-login/GAuth";
 
-import Footer from "../common/footer/footer";
-
 import "./Login.css"
 
 function Loginpage() {
@@ -29,7 +27,6 @@ function Loginpage() {
         <img className="i" src={require("./logo.png")} alt="Company Logo" />
         <GLogin response={Response}/>
       </div>
-<Footer />
     </div>
   );
 }

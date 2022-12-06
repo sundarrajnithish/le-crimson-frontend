@@ -10,7 +10,8 @@
 
 /* Frame*/
 .login_box {
-  background-color: rgba(223, 223, 223, 0.913);
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
   padding: 100px;
   display: flex;
   flex-direction: column;
@@ -30,6 +31,3 @@
   padding: 10px 10px 20px 10px;
   width: 420px;
 }
-
-
-
