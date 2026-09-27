@@ -1,13 +1,107 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/fraunces";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens. Components use the semantic names (bg-paper, text-ink,
+ * border-rule, bg-crimson …) so light/dark only change here.
+ */
+@theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces Variable", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-crimson: var(--crimson);
+  --color-crimson-ink: var(--crimson-ink);
+  --color-crimson-soft: var(--crimson-soft);
+  --color-ok: var(--ok);
+  --color-warn: var(--warn);
+  --color-bad: var(--bad);
+  --color-chart: var(--chart);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --paper: #fbf8f5;
+  --surface: #ffffff;
+  --sunken: #f3eee9;
+  --ink: #1c1917;
+  --muted: #6b635d;
+  --rule: #e7e0d9;
+  --crimson: #9f1239;
+  --crimson-ink: #ffffff;
+  --crimson-soft: #fde8ec;
+  --ok: #15803d;
+  --warn: #b45309;
+  --bad: #b91c1c;
+  --chart: #9f1239;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: #121011;
+  --surface: #1b1819;
+  --sunken: #0c0a0b;
+  --ink: #f4efec;
+  --muted: #a8a09a;
+  --rule: #2f2a2b;
+  --crimson: #fb7185;
+  --crimson-ink: #1b0a0f;
+  --crimson-soft: #3b1320;
+  --ok: #4ade80;
+  --warn: #fbbf24;
+  --bad: #f87171;
+  /* Chart hue validated separately for the dark surface (lightness band). */
+  --chart: #f43f5e;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    @apply bg-paper text-ink antialiased;
+    font-family: var(--font-sans);
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply min-h-dvh;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-crimson;
+  }
+  ::selection {
+    @apply bg-crimson text-crimson-ink;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+  }
+  .kicker {
+    @apply text-xs font-semibold tracking-[0.14em] text-crimson uppercase;
+  }
+  .headline {
+    @apply font-serif font-semibold tracking-tight text-balance;
+  }
+  .card {
+    @apply rounded-2xl border border-rule bg-surface;
+  }
+  .field {
+    @apply w-full rounded-xl border border-rule bg-surface px-3.5 py-2.5 text-ink placeholder:text-muted/80 focus:border-crimson focus:outline-none focus-visible:outline-none focus:ring-2 focus:ring-crimson/30;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

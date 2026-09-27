@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Le Crimson
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**News, tuned to you.** Le Crimson is a personalised news reader. Pick your interests, get a feed built around them, search across every source, save stories for later, and share them with friends in a community feed. Admins get a dashboard with reader and system metrics.
 
-## Available Scripts
+> **v2 (2026)** is a ground-up rebuild of the original 2022 team project (Create React App + a Spring Boot backend on Heroku). See [docs/MODERNIZATION.md](docs/MODERNIZATION.md) for the full audit and what changed.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+|                  |                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| **Onboarding**   | Demo sign-in (no account needed) or Google Identity Services, then choose from 9 interests           |
+| **For you feed** | Lead story, "also today", latest grid and per-topic sections, filtered to your interests             |
+| **Topics**       | One dynamic `/topic/:id` page per category, with follow/unfollow                                     |
+| **Search**       | Debounced, URL-synced, accent-insensitive search with topic filters                                  |
+| **Articles**     | Reading view, bookmarks, copy link, share to the community with a comment                            |
+| **Community**    | Feed of shared stories with optimistic likes, plus follow suggestions                                |
+| **Connections**  | Friends, followers, requests, suggestions and blocked lists, as accessible tabs                      |
+| **Profile**      | Editable profile, stats, interests and your shares                                                   |
+| **Admin**        | KPI tiles, accessible SVG charts (with table views), recent sign-ups and a system log                |
+| **Everywhere**   | Dark mode, mobile layout, skeleton loading, error and empty states, a 404 page, legacy URL redirects |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Vite 8**, **React 19** and **TypeScript 6** (strict, `noUncheckedIndexedAccess`; TypeScript 7 once typescript-eslint supports it)
+- **React Router 8** (data router, lazy-loaded routes, per-route error boundaries)
+- **TanStack Query 5** for data fetching, caching and optimistic updates
+- **Tailwind CSS 4** with semantic design tokens for light and dark themes; Fraunces and Inter fonts self-hosted
+- **Vitest 5** and **Testing Library** for unit and integration tests; **Playwright** and **axe-core** for end-to-end and WCAG 2.1 AA checks
+- **ESLint 9** (typescript-eslint, react-hooks, jsx-a11y; stays on 9 until jsx-a11y supports ESLint 10) and **Prettier**; **GitHub Actions** CI
 
-### `npm test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+nvm use            # Node 22
+npm install
+npm run dev        # http://localhost:5173
+```
 
-### `npm run build`
+With no configuration the app runs in **demo mode**. A bundled, in-browser API serves 36 sample stories (all fictional), community posts and connections, and your interactions persist in `localStorage`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Copy `.env.example` to `.env.local`. Every value is optional.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Variable                | Purpose                                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `VITE_API_BASE_URL`     | Point at a live Le Crimson backend. The HTTP adapter speaks the original v1 endpoints (`/news/home`, `/news/topic`, `/news/search`, `PUT /profile`). |
+| `VITE_GOOGLE_CLIENT_ID` | Enables "Sign in with Google" (Google Identity Services).                                                                                            |
+| `VITE_CONTACT_ENDPOINT` | A form endpoint (e.g. Formspree) for the contact page.                                                                                               |
+| `VITE_ROUTER_MODE`      | `browser` (default) or `hash` for static hosts without an SPA fallback.                                                                              |
 
-### `npm run eject`
+## Scripts
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Command                                       | What it does                                                                                      |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `npm run dev`                                 | Start the dev server                                                                              |
+| `npm run build`                               | Type-check and build to `dist/`                                                                   |
+| `npm run build:demo`                          | Build a **single self-contained HTML file** (`dist-demo/index.html`) for embedding in a portfolio |
+| `npm run lint` / `typecheck` / `format:check` | Static checks                                                                                     |
+| `npm test`                                    | Unit and integration tests (Vitest)                                                               |
+| `npm run test:e2e`                            | End-to-end and accessibility tests (Playwright + axe)                                             |
+| `npm run check`                               | Everything CI runs, in one command                                                                |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+src/
+  api/          typed API contract, demo adapter, legacy HTTP adapter, React Query hooks
+  auth/         session store, AuthProvider, Google sign-in, route guard
+  components/   layout (header, shell, errors), news cards, social, charts, UI primitives
+  data/         fictional demo content
+  features/     interest picker
+  lib/          categories, storage, formatting, theme, persisted stores
+  pages/        one file per route (lazy-loaded)
+e2e/            Playwright journeys + axe accessibility scans
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Credits
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Originally built in 2022 by Nitish Sundarraj, Sindhiya and Mohamed Nabeel Deen. The v2 rebuild is maintained by Nitish Sundarraj.
