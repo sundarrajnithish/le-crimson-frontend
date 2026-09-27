@@ -17,6 +17,9 @@ export function Footer() {
           <Link to="/about" className="hover:text-ink">
             About
           </Link>
+          <Link to="/credits" className="hover:text-ink">
+            Photo credits
+          </Link>
           <Link to="/contact" className="hover:text-ink">
             Contact
           </Link>

@@ -4,21 +4,45 @@ import { CATEGORIES } from "../../lib/categories";
 import { cn } from "../../lib/cn";
 
 /**
- * Uses the article's image when there is one; otherwise draws a deterministic
- * generative cover from the category palette. No broken-image boxes, and the
- * demo stays fully self-contained.
+ * Shows the article's bundled photo (responsive, 480w/1200w) or remote image
+ * when there is one; otherwise, or if it fails to load, draws a deterministic
+ * generative cover from the category palette. No broken-image boxes.
  */
 export function ArticleCover({
   article,
   className,
   iconSize = 44,
+  sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
+  priority = false,
 }: {
   article: Article;
   className?: string;
   iconSize?: number;
+  /** The rendered width, so the browser picks the right file. */
+  sizes?: string;
+  /** Load immediately (for the first, above-the-fold image). */
+  priority?: boolean;
 }) {
   const [failed, setFailed] = useState(false);
   const cat = CATEGORIES[article.category];
+
+  if (article.photo && !failed) {
+    return (
+      <img
+        src={article.photo.large}
+        srcSet={`${article.photo.small} 480w, ${article.photo.large} 1200w`}
+        sizes={sizes}
+        alt=""
+        width={1200}
+        height={750}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding="async"
+        onError={() => setFailed(true)}
+        className={cn("h-full w-full object-cover", className)}
+      />
+    );
+  }
 
   if (article.imageUrl && !failed) {
     return (

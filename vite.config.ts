@@ -9,7 +9,8 @@ import { viteSingleFile } from "vite-plugin-singlefile";
 export default defineConfig(({ mode }) => {
   const isDemo = mode === "demo";
   return {
-    base: isDemo ? "./" : "/",
+    // BASE_PATH is set by the GitHub Pages workflow (e.g. "/le-crimson-frontend/").
+    base: isDemo ? "./" : (process.env.BASE_PATH ?? "/"),
     plugins: [react(), tailwindcss(), ...(isDemo ? [viteSingleFile()] : [])],
     build: {
       outDir: isDemo ? "dist-demo" : "dist",
