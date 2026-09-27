@@ -39,15 +39,20 @@ test.describe("Le Crimson", () => {
     await expect(page.getByRole("region", { name: /top stories/i })).toBeVisible();
     await expectNoA11yViolations(page);
 
-    // Open the lead story, save it and share it.
-    await page
+    // Open the lead story, save it and share it. Read the title from the link we click,
+    // then wait for the article page itself (the URL changes before the lazy page renders).
+    const lead = page
       .getByRole("region", { name: /top stories/i })
       .getByRole("link")
+      .first();
+    const title = (await lead.textContent())!.trim();
+    await lead.click();
+    await expect(page).toHaveURL(/\/article\//);
+    await expect(page.getByRole("heading", { level: 1, name: title })).toBeVisible();
+    await page
+      .getByRole("button", { name: `Save “${title}”`, exact: true })
       .first()
       .click();
-    await expect(page).toHaveURL(/\/article\//);
-    const title = (await page.getByRole("heading", { level: 1 }).textContent())!;
-    await page.getByRole("button", { name: /^save “/i }).click();
     await page.getByRole("button", { name: /^share$/i }).click();
     await page.getByLabel(/add a comment/i).fill("Worth your five minutes.");
     await page
