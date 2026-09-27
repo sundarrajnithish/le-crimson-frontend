@@ -34,7 +34,7 @@ export function ArticleCard({
     return (
       <article className={cn("group relative flex gap-4 py-4", className)}>
         <div className="aspect-square w-20 shrink-0 overflow-hidden rounded-xl sm:w-24">
-          <ArticleCover article={article} iconSize={24} />
+          <ArticleCover article={article} iconSize={24} sizes="96px" />
         </div>
         <div className="min-w-0 flex-1">
           <p className="kicker mb-1">{cat.label}</p>
@@ -66,6 +66,8 @@ export function ArticleCard({
         <ArticleCover
           article={article}
           iconSize={lead ? 64 : 40}
+          sizes={lead ? "(min-width: 1024px) 60vw, 100vw" : undefined}
+          priority={lead}
           className="transition-transform duration-500 group-hover:scale-[1.03]"
         />
       </div>

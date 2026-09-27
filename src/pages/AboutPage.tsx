@@ -4,7 +4,7 @@ import { Logo } from "../components/layout/Logo";
 const timeline = [
   {
     year: "2022",
-    text: "Le Crimson starts as a team project: a Spring Boot backend plus a React front end, built over three sprints.",
+    text: "Le Crimson starts as a sprint project: a Spring Boot backend plus a React front end, built over three sprints.",
   },
   {
     year: "2022",
@@ -42,10 +42,9 @@ export default function AboutPage() {
         ))}
       </ol>
 
-      <h2 className="headline mt-12 mb-3 text-2xl">Team</h2>
+      <h2 className="headline mt-12 mb-3 text-2xl">Credits</h2>
       <p className="text-muted">
-        Originally built by Nitish Sundarraj, Sindhiya and Mohamed Nabeel Deen. The v2 rebuild is
-        maintained by Nitish Sundarraj.
+        Version 2 is designed, rebuilt and maintained by Nitish Sundarraj.
       </p>
 
       <div className="mt-10 flex flex-wrap gap-3">

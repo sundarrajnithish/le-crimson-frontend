@@ -29,7 +29,7 @@ export function PostCard({ post }: { post: Post }) {
           className="group mt-4 flex overflow-hidden rounded-xl border border-rule hover:border-ink/30"
         >
           <div className="w-28 shrink-0 sm:w-36">
-            <ArticleCover article={a} iconSize={24} />
+            <ArticleCover article={a} iconSize={24} sizes="144px" />
           </div>
           <div className="min-w-0 p-3">
             <p className="kicker mb-1">{CATEGORIES[a.category].label}</p>

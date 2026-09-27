@@ -1,5 +1,21 @@
 import type { CategoryId } from "../lib/categories";
 
+export interface PhotoCredit {
+  title: string;
+  author: string;
+  license: string;
+  licenseUrl?: string;
+  /** The file's page on Wikimedia Commons. */
+  source: string;
+}
+
+/** A bundled, responsive photo with its attribution. */
+export interface Photo {
+  small: string;
+  large: string;
+  credit: PhotoCredit;
+}
+
 export interface Article {
   id: string;
   title: string;
@@ -11,7 +27,9 @@ export interface Article {
   author?: string;
   /** External link to the original story, when one exists. */
   url?: string;
-  /** Remote cover image. When absent, a generated cover is drawn. */
+  /** Bundled photo (demo content). Takes priority over imageUrl. */
+  photo?: Photo;
+  /** Remote cover image. When neither is present, a generated cover is drawn. */
   imageUrl?: string;
   publishedAt: string;
   /** Deterministic number used to vary generated covers. */

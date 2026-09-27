@@ -18,6 +18,7 @@ import {
   AdminPage,
   AboutPage,
   ContactPage,
+  CreditsPage,
 } from "./pages/lazy";
 
 const guard = (el: ReactElement, opts?: { requireInterests?: boolean; role?: "admin" }) => (
@@ -35,6 +36,7 @@ export const routes: RouteObject[] = [
           { path: "/", element: <LandingPage /> },
           { path: "/about", element: <AboutPage /> },
           { path: "/contact", element: <ContactPage /> },
+          { path: "/credits", element: <CreditsPage /> },
           {
             path: "/welcome",
             element: guard(<InterestsPage mode="onboarding" />, { requireInterests: false }),
@@ -72,5 +74,8 @@ export const routes: RouteObject[] = [
 ];
 
 export function createAppRouter() {
-  return config.routerMode === "hash" ? createHashRouter(routes) : createBrowserRouter(routes);
+  if (config.routerMode === "hash") return createHashRouter(routes);
+  // Serve correctly from a sub-path such as https://user.github.io/le-crimson-frontend/.
+  const basename = import.meta.env.BASE_URL.replace(/\/+$/, "") || "/";
+  return createBrowserRouter(routes, { basename });
 }

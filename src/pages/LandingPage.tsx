@@ -4,6 +4,7 @@ import { useAuth } from "../auth/context";
 import { GoogleSignIn } from "../auth/GoogleSignIn";
 import { ArticleCover } from "../components/news/ArticleCover";
 import { Button } from "../components/ui/Button";
+import { photoFor } from "../api/demo";
 import { SEED_ARTICLES } from "../data/articles";
 import { CATEGORIES } from "../lib/categories";
 import type { Article } from "../api/types";
@@ -16,6 +17,7 @@ const previews: Article[] = ["t1", "sc1", "s1"].map((id, i) => {
     body: [...a.body],
     publishedAt: "",
     seed: 9173 * (i + 3),
+    photo: photoFor(id),
   };
 });
 
@@ -85,7 +87,12 @@ export default function LandingPage() {
               }}
             >
               <div className={i === previews.length - 1 ? "aspect-[16/8]" : "aspect-[16/10]"}>
-                <ArticleCover article={a} iconSize={34} />
+                <ArticleCover
+                  article={a}
+                  iconSize={34}
+                  sizes="360px"
+                  priority={i === previews.length - 1}
+                />
               </div>
               {/* Only the front card carries text; the cards behind read as a stack of covers. */}
               {i === previews.length - 1 && (

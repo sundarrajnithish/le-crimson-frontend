@@ -13,3 +13,4 @@ export const ProfilePage = lazy(() => import("./ProfilePage"));
 export const AdminPage = lazy(() => import("./AdminPage"));
 export const AboutPage = lazy(() => import("./AboutPage"));
 export const ContactPage = lazy(() => import("./ContactPage"));
+export const CreditsPage = lazy(() => import("./CreditsPage"));

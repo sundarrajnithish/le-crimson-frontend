@@ -1,5 +1,6 @@
 import { SEED_ARTICLES } from "../data/articles";
 import { MEMBERS, SEED_CONNECTIONS, SEED_POSTS, memberById } from "../data/community";
+import { PHOTO_CREDITS } from "../data/photos";
 import { CATEGORY_IDS, type CategoryId } from "../lib/categories";
 import { readJSON, writeJSON } from "../lib/storage";
 import type {
@@ -57,6 +58,14 @@ export function matchesQuery(article: Article, query: string): boolean {
   return terms.length > 0 && terms.every((t) => haystack.includes(t));
 }
 
+/** Public URL of a bundled photo, respecting Vite's base path (e.g. GitHub Pages). */
+export function photoFor(id: string): Article["photo"] {
+  const credit = PHOTO_CREDITS[id];
+  if (!credit) return undefined;
+  const base = `${import.meta.env.BASE_URL}images/articles/${id}`;
+  return { small: `${base}-480.webp`, large: `${base}-1200.webp`, credit };
+}
+
 export interface DemoApiOptions {
   /** Simulated network latency in ms (0 in tests). */
   latency?: number;
@@ -82,6 +91,7 @@ export function createDemoApi({
     author: a.author,
     publishedAt: new Date(bootedAt - a.age * MINUTE).toISOString(),
     seed: hash(a.id),
+    photo: photoFor(a.id),
   })).sort((x, y) => y.publishedAt.localeCompare(x.publishedAt));
 
   const initialState = (): DemoState => ({

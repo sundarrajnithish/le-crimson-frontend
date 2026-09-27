@@ -4,6 +4,7 @@ import { ArrowLeft, ExternalLink, Link2, Share2 } from "lucide-react";
 import { useArticle, useArticles } from "../api/queries";
 import { ArticleCard } from "../components/news/ArticleCard";
 import { ArticleCover } from "../components/news/ArticleCover";
+import { PhotoCaption } from "../components/news/PhotoCaption";
 import { BookmarkButton } from "../components/news/BookmarkButton";
 import { ShareDialog } from "../components/social/ShareDialog";
 import { Button, ButtonLink } from "../components/ui/Button";
@@ -102,9 +103,17 @@ export default function ArticlePage() {
         </div>
       </div>
 
-      <div className="mx-auto my-8 aspect-[16/8] max-w-4xl overflow-hidden rounded-3xl">
-        <ArticleCover article={article} iconSize={72} />
-      </div>
+      <figure className="mx-auto my-8 max-w-4xl">
+        <div className="aspect-[16/8] overflow-hidden rounded-3xl">
+          <ArticleCover
+            article={article}
+            iconSize={72}
+            sizes="(min-width: 1024px) 896px, 100vw"
+            priority
+          />
+        </div>
+        {article.photo && <PhotoCaption credit={article.photo.credit} />}
+      </figure>
 
       <div className="mx-auto max-w-2xl">
         {article.body.length > 0 ? (

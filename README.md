@@ -2,7 +2,7 @@
 
 **News, tuned to you.** Le Crimson is a personalised news reader. Pick your interests, get a feed built around them, search across every source, save stories for later, and share them with friends in a community feed. Admins get a dashboard with reader and system metrics.
 
-> **v2 (2026)** is a ground-up rebuild of the original 2022 team project (Create React App + a Spring Boot backend on Heroku). See [docs/MODERNIZATION.md](docs/MODERNIZATION.md) for the full audit and what changed.
+> **v2 (2026)** is a ground-up rebuild of the original 2022 sprint project (Create React App + a Spring Boot backend on Heroku). See [docs/MODERNIZATION.md](docs/MODERNIZATION.md) for the full audit and what changed.
 
 ## Features
 
@@ -38,6 +38,10 @@ npm run dev        # http://localhost:5173
 
 With no configuration the app runs in **demo mode**. A bundled, in-browser API serves 36 sample stories (all fictional), community posts and connections, and your interactions persist in `localStorage`.
 
+### Photos
+
+The 36 demo stories are illustrated with free photos from Wikimedia Commons (public domain, CC0, CC BY and CC BY-SA), bundled as responsive WebP files in `public/images/articles/`. Each article shows its credit, the in-app **Photo credits** page (`/credits`) lists them all, and [`public/images/articles/CREDITS.md`](public/images/articles/CREDITS.md) records the source and license of every file.
+
 ### Configuration
 
 Copy `.env.example` to `.env.local`. Every value is optional.
@@ -55,11 +59,21 @@ Copy `.env.example` to `.env.local`. Every value is optional.
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `npm run dev`                                 | Start the dev server                                                                              |
 | `npm run build`                               | Type-check and build to `dist/`                                                                   |
+| `BASE_PATH=/repo/ npm run build`              | Build for a sub-path (what the Pages workflow does)                                               |
 | `npm run build:demo`                          | Build a **single self-contained HTML file** (`dist-demo/index.html`) for embedding in a portfolio |
 | `npm run lint` / `typecheck` / `format:check` | Static checks                                                                                     |
 | `npm test`                                    | Unit and integration tests (Vitest)                                                               |
 | `npm run test:e2e`                            | End-to-end and accessibility tests (Playwright + axe)                                             |
 | `npm run check`                               | Everything CI runs, in one command                                                                |
+
+## Deploying to GitHub Pages
+
+`.github/workflows/deploy.yml` builds and publishes the site on every push to the default branch (`Nitish`), or on demand from the Actions tab.
+
+1. In the repository on GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions** (one time).
+2. Push to `Nitish`. The site is served at `https://sundarrajnithish.github.io/le-crimson-frontend/`.
+
+The workflow builds with `BASE_PATH=/<repo-name>/` so assets and routes work under the sub-path, and copies `index.html` to `404.html` so deep links such as `/article/t4` load the app.
 
 ## Project structure
 
@@ -77,4 +91,4 @@ e2e/            Playwright journeys + axe accessibility scans
 
 ## Credits
 
-Originally built in 2022 by Nitish Sundarraj, Sindhiya and Mohamed Nabeel Deen. The v2 rebuild is maintained by Nitish Sundarraj.
+Le Crimson v2 is designed, rebuilt and maintained by [Nitish Sundarraj](https://github.com/sundarrajnithish).
